@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Movie carousel
-    const moviePosters = ['images/movie1.jpg', 'images/movie2.jpg', 'images/movie3.jpg'];
+    const moviePosters = ['images/movie1.jpg'];
     const movieCarousel = document.getElementById('movieCarousel');
     moviePosters.forEach((poster, index) => {
         const item = document.createElement('div');
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Bookshelf
-    const books = ['images/book1.jpg', 'images/book2.jpg', 'images/book3.jpg', 'images/book4.jpg'];
+    const books = ['images/book1.jpeg', 'images/book2.jpeg', 'images/book3.jpeg', 'images/book4.jpeg'];
     const bookshelf = document.getElementById('bookshelf');
     books.forEach(book => {
         const bookDiv = document.createElement('div');
@@ -78,7 +78,9 @@ document.addEventListener('DOMContentLoaded', function() {
         'images/image1.jpg',
         'images/image2.jpg',
         'images/image3.jpeg',
-        'images/image5.jpg'
+        'images/image5.jpg',
+        'images/image5.jpeg',
+        'images/image6.jpeg'
     ];
     const photoGallery = document.getElementById('photoGallery');
     photos.forEach(photo => {
