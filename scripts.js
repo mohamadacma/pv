@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const photos = [
         'images/image1.jpg',
         'images/image2.jpg',
-        'images/image3.jpeg',
         'images/image5.jpg',
         'images/image5.jpeg',
         'images/image6.jpeg'
