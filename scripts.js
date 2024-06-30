@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Photo gallery
-    const photos = ['photo1.jpg', 'photo2.jpg', 'photo3.jpg', 'photo4.jpg'];
+    const photos = ['image.jpg', 'image2.jpg', 'image3.jpeg', 'image5.jpg'];
     const photoGallery = document.getElementById('photoGallery');
     photos.forEach(photo => {
         const photoDiv = document.createElement('div');

@@ -14,6 +14,15 @@
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Web" />
         <option name="gradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/current" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Web" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/resources" />
+        <option name="gradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/current" />
       </GradleProjectSettings>
     </option>
   </component>

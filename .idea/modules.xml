@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PersonalVlogSerivceLambda.iml" filepath="$PROJECT_DIR$/PersonalVlogSerivceLambda.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/PersonalVlogSerivceLambda.main.iml" filepath="$PROJECT_DIR$/.idea/modules/PersonalVlogSerivceLambda.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/PersonalVlogSerivceLambda.test.iml" filepath="$PROJECT_DIR$/.idea/modules/PersonalVlogSerivceLambda.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Web.iml" filepath="$PROJECT_DIR$/Web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Web.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Web.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/personalVlog.iml" filepath="$PROJECT_DIR$/.idea/personalVlog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resources.iml" filepath="$PROJECT_DIR$/resources.iml" />
     </modules>
   </component>
 </project>
