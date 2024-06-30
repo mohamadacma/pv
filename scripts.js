@@ -79,7 +79,9 @@ document.addEventListener('DOMContentLoaded', function() {
         'images/image2.jpg',
         'images/image5.jpg',
         'images/image5.jpeg',
-        'images/image6.jpeg'
+        'images/image6.jpeg',
+        'images/image8.jpeg',
+        'images/image9.jpeg'
     ];
     const photoGallery = document.getElementById('photoGallery');
     photos.forEach(photo => {
