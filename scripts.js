@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Cinematic background
+    const bg = document.getElementById('cinematic-bg');
+    setInterval(() => {
+        bg.style.background = `linear-gradient(${Math.random() * 360}deg, #000000, #1a1a1a)`;
+    }, 5000);
 
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -9,23 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-
-    const sections = document.querySelectorAll('.section');
-    const fadeInSection = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
-            }
-        });
-    };
-    const sectionObserver = new IntersectionObserver(fadeInSection, {
-        root: null,
-        threshold: 0.1
-    });
-    sections.forEach(section => sectionObserver.observe(section));
-
-
+    // Movie carousel
     const moviePosters = ['movie1.jpg', 'movie2.jpg', 'movie3.jpg'];
     const movieCarousel = document.getElementById('movieCarousel');
     moviePosters.forEach((poster, index) => {
@@ -35,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         movieCarousel.appendChild(item);
     });
 
-
+    // Series grid
     const series = ['Breaking Bad', 'Game of Thrones', 'Stranger Things', 'The Crown'];
     const seriesGrid = document.getElementById('seriesGrid');
     series.forEach(show => {
@@ -51,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         seriesGrid.appendChild(card);
     });
 
-
+    // Music visualizer
     const musicVisualizer = document.getElementById('musicVisualizer');
     const ctx = musicVisualizer.getContext('2d');
     function drawVisualizer() {
@@ -65,13 +55,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     drawVisualizer();
 
-
+    // Bookshelf
     const books = ['book1.jpg', 'book2.jpg', 'book3.jpg', 'book4.jpg'];
     const bookshelf = document.getElementById('bookshelf');
     books.forEach(book => {
         const bookDiv = document.createElement('div');
         bookDiv.className = 'col-md-3 col-sm-6 mb-3';
-        bookDiv.innerHTML = `<img src="${book}" class="img-fluid" alt="Book Cover">`;
+        bookDiv.innerHTML = `
+            <div class="card">
+                <img src="${book}" class="card-img-top" alt="Book Cover">
+            </div>
+        `;
         bookshelf.appendChild(bookDiv);
+    });
+
+    // Photo gallery
+    const photos = ['photo1.jpg', 'photo2.jpg', 'photo3.jpg', 'photo4.jpg'];
+    const photoGallery = document.getElementById('photoGallery');
+    photos.forEach(photo => {
+        const photoDiv = document.createElement('div');
+        photoDiv.className = 'col-md-3 col-sm-6 mb-3';
+        photoDiv.innerHTML = `
+            <div class="card">
+                <img src="${photo}" class="card-img-top" alt="Photography">
+            </div>
+        `;
+        photoGallery.appendChild(photoDiv);
     });
 });
