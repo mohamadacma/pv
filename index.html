@@ -31,39 +31,55 @@
     </section>
     <section id="projects" class="section">
         <h2>Projects</h2>
-        <h3>TeamSynchronizer: Bridging the Gap in Remote Work</h3>
-        <p>In the era of widespread remote work, talent knows no geographical bounds. However, this shift presents unique challenges in team management and collaboration across diverse locations. GeographicAI addresses a critical question:</p>
-        <blockquote class="blockquote">
-            <p class="mb-0">"How can we empower managers to effectively lead geographically dispersed teams while fostering a strong sense of connection among team members?"</p>
-        </blockquote>
-        <p>Our solution leverages innovative approaches to overcome the contextual barriers imposed by geographical separation, enhancing team cohesion and productivity in the remote work landscape.</p>
-        <h4>How It Works</h4>
-        <p>TeamSynchronizer operates as a sophisticated web application:
-        <ol>
-            <li>The client submits a request to our CloudFront distribution.</li>
-            <li>CloudFront serves a static copy of the HTML, CSS, and JavaScript from an S3 bucket.</li>
-            <li>The JavaScript code runs in the browser and makes calls to our Java-based backend via API Gateway.</li>
-            <li>Our Lambda functions process these requests, interacting with DynamoDB for data persistence and external APIs for additional functionality.</li>
-            <li>The processed data is then returned to the user's browser, providing a seamless and responsive experience.</li>
-        </ol>
-        </p>
+        <div class="project-card">
+            <h3>TeamSynchronizer: Bridging the Gap in Remote Work</h3>
+            <p class="lead">Empowering geographically dispersed teams for enhanced collaboration and productivity.</p>
 
-        <h4>Technologies Used</h4>
-        <ul>
-            <li>Frontend: HTML5, CSS3, JavaScript</li>
-            <li>Backend: Java</li>
-            <li>AWS Services: CloudFront, S3, API Gateway, Lambda, DynamoDB</li>
-            <li>External APIs: Weather API, News API</li>
-            <li>Security: AWS Secrets Manager</li>
-        </ul>
-        <a href="https://d2qcetd7rqhjj0.cloudfront.net/" target="_blank" class="btn btn-primary mt-3">Explore TeamSynchronizer</a>
-        <h4>Project Demo</h4>
-        <p>Watch a brief demonstration of TeamSynchronizer in action:</p>
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>How It Works</h4>
+                    <div class="workflow-diagram">
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Technologies Used</h4>
+                    <div class="tech-icons">
+                        <i class="fab fa-html5" title="HTML5"></i>
+                        <i class="fab fa-css3-alt" title="CSS3"></i>
+                        <i class="fab fa-js-square" title="JavaScript"></i>
+                        <i class="fab fa-java" title="Java"></i>
+                        <i class="fab fa-aws" title="AWS"></i>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-actions">
+                <a href="https://d2qcetd7rqhjj0.cloudfront.net/" target="_blank" class="btn btn-primary mt-3">Explore TeamSynchronizer</a>
+                <button class="btn btn-secondary mt-3" data-toggle="modal" data-target="#demoModal">Watch Demo</button>
+            </div>
         </div>
     </section>
-    </section>
+
+
+    <div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="demoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="demoModalLabel">TeamSynchronizer Demo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZFs42j0D8qI" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <section id="movies" class="section">
         <h2>Favorite Movies</h2>
         <p>True films:</p>
