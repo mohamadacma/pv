@@ -70,14 +70,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Photo gallery
-    const photos = ['image.jpg', 'image2.jpg', 'image3.jpeg', 'image5.jpg'];
+    const photos = [
+        'image1.jpg',
+        'image2.jpg',
+        'image3.jpg',
+        'image5.jpg',
+        'travel5.jpg',
+        'travel6.jpg'
+    ];
     const photoGallery = document.getElementById('photoGallery');
     photos.forEach(photo => {
         const photoDiv = document.createElement('div');
-        photoDiv.className = 'col-md-3 col-sm-6 mb-3';
+        photoDiv.className = 'col-md-4 col-sm-6 mb-3';
         photoDiv.innerHTML = `
             <div class="card">
-                <img src="${photo}" class="card-img-top" alt="Photography">
+                <img src="images/${photo}" class="card-img-top" alt="Travel Photography">
             </div>
         `;
         photoGallery.appendChild(photoDiv);
