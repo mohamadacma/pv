@@ -119,3 +119,14 @@ footer {
     object-fit: cover;
     transition: transform 0.3s ease;
 }
+#projects ul, #projects ol {
+    padding-left: 20px;
+}
+
+#projects li {
+    margin-bottom: 10px;
+}
+
+.embed-responsive {
+    margin-top: 20px;
+}
