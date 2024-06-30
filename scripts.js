@@ -75,13 +75,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Photo gallery
     const photos = [
-        'images/image1.jpg',
-        'images/image2.jpg',
-        'images/image5.jpg',
-        'images/image5.jpeg',
         'images/image6.jpeg',
+        'images/image7.jpeg',
         'images/image8.jpeg',
-        'images/image9.jpeg',
+        'images/image9.jpeg'
     ];
     const photoGallery = document.getElementById('photoGallery');
     photos.forEach(photo => {
