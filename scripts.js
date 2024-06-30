@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Series grid
-    const series = ['Breaking Bad', 'Game of Thrones', 'Stranger Things', 'The Crown'];
+    const series = ['The leftovers', 'Game of Thrones', 'Blackadder', 'Misfits'];
     const seriesGrid = document.getElementById('seriesGrid');
     series.forEach(show => {
         const card = document.createElement('div');
