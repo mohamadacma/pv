@@ -21,23 +21,50 @@ main {
 .section {
     padding: 60px 0;
     border-bottom: 1px solid #e0e0e0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
 }
 
 .section:last-child {
     border-bottom: none;
 }
 
-.social-icons a {
-    color: #333;
-    font-size: 1.5em;
-    transition: color 0.3s ease;
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.social-icons a:hover {
-    color: #007bff;
+.animate-title {
+    animation: colorChange 5s infinite alternate;
 }
 
-#movieCarousel, #musicPlayer, #bookshelf {
+@keyframes colorChange {
+    0% { color: white; }
+    50% { color: #ffcc00; }
+    100% { color: white; }
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+#movieCarousel, #musicVisualizer, #bookshelf {
     background-color: #f0f0f0;
     height: 200px;
     display: flex;
@@ -46,7 +73,10 @@ main {
     margin-top: 20px;
 }
 
-#seriesList {
-    max-height: 300px;
-    overflow-y: auto;
+#seriesGrid .card {
+    transition: transform 0.3s;
+}
+
+#seriesGrid .card:hover {
+    transform: scale(1.05);
 }
