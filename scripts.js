@@ -78,13 +78,20 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     const photoGallery = document.getElementById('photoGallery');
     photos.forEach(photo => {
-        const photoDiv = document.createElement('div');
-        photoDiv.className = 'col-md-4 col-sm-6 mb-3';
-        photoDiv.innerHTML = `
-            <div class="card">
-                <img src="${photo}" class="card-img-top" alt="Photography">
-            </div>
-        `;
-        photoGallery.appendChild(photoDiv);
+        const img = new Image();
+        img.onload = function() {
+            const photoDiv = document.createElement('div');
+            photoDiv.className = 'col-md-4 col-sm-6 mb-3';
+            photoDiv.innerHTML = `
+                <div class="card">
+                    <img src="${photo}" class="card-img-top" alt="Photography">
+                </div>
+            `;
+            photoGallery.appendChild(photoDiv);
+        };
+        img.onerror = function() {
+            console.error(`Failed to load image: ${photo}`);
+        };
+        img.src = photo;
     });
 });
