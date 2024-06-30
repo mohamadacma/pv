@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Movie carousel
-    const moviePosters = ['images/movie1.jpg'];
     const movieCarousel = document.getElementById('movieCarousel');
     moviePosters.forEach((poster, index) => {
         const item = document.createElement('div');
