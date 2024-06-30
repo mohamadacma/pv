@@ -39,10 +39,22 @@
             <div class="row">
                 <div class="col-md-6">
                     <h4>How It Works</h4>
-                    <div class="workflow-diagram">
-
+                    <ol>
+                        <li>The client submits a request to our CloudFront distribution.</li>
+                        <li>CloudFront serves a static copy of the HTML, CSS, and JavaScript from an S3 bucket.</li>
+                        <li>The JavaScript code runs in the browser and makes calls to our Java-based backend via API Gateway.</li>
+                        <li>Our Lambda functions process these requests, interacting with DynamoDB for data persistence and external APIs for additional functionality.</li>
+                        <li>The processed data is then returned to the user's browser, providing a seamless and responsive experience.</li>
+                    </ol>
+                </div>
+                <div class="col-md-6">
+                    <h4>Architecture Diagram</h4>
+                    <div class="architecture-diagram">
+                        <img src="images/architecture_diagram.png" alt="TeamSynchronizer Architecture" class="img-fluid">
                     </div>
                 </div>
+            </div>
+                    </div>
                 <div class="col-md-6">
                     <h4>Technologies Used</h4>
                     <div class="tech-icons">
@@ -60,7 +72,6 @@
                 <a href="https://d2qcetd7rqhjj0.cloudfront.net/" target="_blank" class="btn btn-primary mt-3">Explore TeamSynchronizer</a>
                 <button class="btn btn-secondary mt-3" data-toggle="modal" data-target="#demoModal">Watch Demo</button>
             </div>
-        </div>
     </section>
 
 
