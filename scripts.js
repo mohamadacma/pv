@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Movie carousel
-    const moviePosters = ['movie1.jpg', 'movie2.jpg', 'movie3.jpg'];
+    const moviePosters = ['images/movie1.jpg', 'images/movie2.jpg', 'images/movie3.jpg'];
     const movieCarousel = document.getElementById('movieCarousel');
     moviePosters.forEach((poster, index) => {
         const item = document.createElement('div');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Series grid
-    const series = ['The leftovers', 'Game of Thrones', 'Blackadder', 'Misfits'];
+    const series = ['The Leftovers', 'Game of Thrones', 'Blackadder', 'Misfits'];
     const seriesGrid = document.getElementById('seriesGrid');
     series.forEach(show => {
         const card = document.createElement('div');
@@ -43,20 +43,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Music visualizer
     const musicVisualizer = document.getElementById('musicVisualizer');
-    const ctx = musicVisualizer.getContext('2d');
-    function drawVisualizer() {
-        ctx.clearRect(0, 0, musicVisualizer.width, musicVisualizer.height);
-        for (let i = 0; i < 20; i++) {
-            const height = Math.random() * musicVisualizer.height;
-            ctx.fillStyle = `hsl(${Math.random() * 360}, 50%, 50%)`;
-            ctx.fillRect(i * 20, musicVisualizer.height - height, 15, height);
+    if (musicVisualizer) {
+        const ctx = musicVisualizer.getContext('2d');
+        function drawVisualizer() {
+            ctx.clearRect(0, 0, musicVisualizer.width, musicVisualizer.height);
+            for (let i = 0; i < 20; i++) {
+                const height = Math.random() * musicVisualizer.height;
+                ctx.fillStyle = `hsl(${Math.random() * 360}, 50%, 50%)`;
+                ctx.fillRect(i * 20, musicVisualizer.height - height, 15, height);
+            }
+            requestAnimationFrame(drawVisualizer);
         }
-        requestAnimationFrame(drawVisualizer);
+        drawVisualizer();
+    } else {
+        console.error("Canvas element 'musicVisualizer' not found.");
     }
-    drawVisualizer();
 
     // Bookshelf
-    const books = ['book1.jpg', 'book2.jpg', 'book3.jpg', 'book4.jpg'];
+    const books = ['images/book1.jpg', 'images/book2.jpg', 'images/book3.jpg', 'images/book4.jpg'];
     const bookshelf = document.getElementById('bookshelf');
     books.forEach(book => {
         const bookDiv = document.createElement('div');
