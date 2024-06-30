@@ -74,9 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'image1.jpg',
         'image2.jpg',
         'image3.jpg',
-        'image5.jpg',
-        'travel5.jpg',
-        'travel6.jpg'
+        'image5.jpg'
     ];
     const photoGallery = document.getElementById('photoGallery');
     photos.forEach(photo => {
@@ -84,9 +82,26 @@ document.addEventListener('DOMContentLoaded', function() {
         photoDiv.className = 'col-md-4 col-sm-6 mb-3';
         photoDiv.innerHTML = `
             <div class="card">
-                <img src="images/${photo}" class="card-img-top" alt="Travel Photography">
+                <img src="images/${photo}" class="card-img-top" alt="Photography">
             </div>
         `;
         photoGallery.appendChild(photoDiv);
+    });
+
+    // Travel photo gallery
+    const travelPhotos = [
+        'travel5.jpg',
+        'travel6.jpg'
+    ];
+    const travelGallery = document.getElementById('travelGallery');
+    travelPhotos.forEach(photo => {
+        const photoDiv = document.createElement('div');
+        photoDiv.className = 'col-md-4 col-sm-6 mb-3';
+        photoDiv.innerHTML = `
+            <div class="card">
+                <img src="images/${photo}" class="card-img-top" alt="Travel Photography">
+            </div>
+        `;
+        travelGallery.appendChild(photoDiv);
     });
 });
