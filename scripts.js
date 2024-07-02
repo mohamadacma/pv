@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 link: "https://open.spotify.com/show/3Oy7DTtqKTiEAWEnDLWpBu"
             }
         ];
-
+        //podcasts
         const podcastList = document.getElementById('podcastList');
         if (podcastList) {
             podcasts.forEach(podcast => {

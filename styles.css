@@ -89,7 +89,7 @@ h2 {
 }
 
 .movie-poster {
-    max-height: 400px;
+   max-height: 100%;
     max-width: 100%;
     object-fit: contain;
     border-radius: 5px;
@@ -122,8 +122,10 @@ h2 {
 
 #movieCarousel .carousel-inner img {
     width: 100%;
-    height: auto;
+    height: 400px;
+    display: flex;
     object-fit: cover;
+    overflow: hidden;
 }
 #movieCarousel {
     max-width: 300px;
@@ -132,6 +134,12 @@ h2 {
     border-radius: 10px;
     overflow: hidden;
 }
+#movieCarousel .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    }
 
 #seriesGrid .card, #bookshelf .card, #photoGallery .card, #travelGallery .card {
     background-color: rgba(0, 0, 0, 0.7);
