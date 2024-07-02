@@ -58,7 +58,7 @@ h2 {
 }
 
 .typewriter {
-    overflow: visible;
+    overflow: hidden;
     border-right: .15em solid #ffd700;
     white-space: nowrap;
     margin: 0 auto;
