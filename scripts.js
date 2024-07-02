@@ -84,33 +84,92 @@ document.addEventListener('DOMContentLoaded', function() {
         bookshelf.appendChild(bookDiv);
     });
     const podcasts = [
-        {
-            title: "The Joe Rogan Experience",
-            description: "Comedian Joe Rogan's long-form conversations with guests.",
-            link: "https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk"
-        },
-        {
-            title: "Hardcore History",
-            description: "Dan Carlin's deep dives into historical topics.",
-            link: "https://www.dancarlin.com/hardcore-history-series/"
-        },
+            {
+                title: "All-In Podcast",
+                description: "Industry veterans discuss tech, economics, and politics.",
+                link: "https://open.spotify.com/show/2IqXAVFR4e0Bmyjsdc8QzF"
+            },
+            {
+                title: "Plain English with Derek Thompson",
+                description: "Clear explanations of the most interesting stories in business, science, and technology.",
+                link: "https://open.spotify.com/show/51AAeGPvCO4ScUmXxP6Lgh"
+            },
+            {
+                title: "Dwarkesh Podcast",
+                description: "Conversations with economists, scientists, and technologists.",
+                link: "https://open.spotify.com/show/3iJpUGgGD6XOJN5PT5kKoq"
+            },
+            {
+                title: "EconTalk",
+                description: "Economics conversations for the curious mind.",
+                link: "https://open.spotify.com/show/3TeemcPgTqNmFmdHHeuAVh"
+            },
+            {
+                title: "Conversations with Tyler",
+                description: "In-depth conversations with thinkers across various fields.",
+                link: "https://open.spotify.com/show/2Cr8dqJunkDZEq3fUQVi2n"
+            },
+            {
+                title: "Switched on Pop",
+                description: "Analyzing pop music and its cultural impact.",
+                link: "https://open.spotify.com/show/1sgBmMBsvTUssYVGAEgrrI"
+            },
+            {
+                title: "This American Life",
+                description: "Weekly public radio program and podcast.",
+                link: "https://open.spotify.com/show/2KYXQMYQSGDq1O5wYGYruz"
+            },
+            {
+                title: "99% Invisible",
+                description: "Design, architecture, and the 99% invisible activity that shapes our world.",
+                link: "https://open.spotify.com/show/2VRS1IJCTn2Nlkg33ZVfkM"
+            },
+            {
+                title: "The Ezra Klein Show",
+                description: "In-depth conversations about ideas that matter.",
+                link: "https://open.spotify.com/show/3oB5noYIwEB2dMAREj2F7S"
+            },
+            {
+                title: "The Morgan Housel Podcast",
+                description: "Exploring the psychology of money and investing.",
+                link: "https://open.spotify.com/show/7ySLbGkTqTQC4T1Ssb5bcE"
+            },
+            {
+                title: "How I Write",
+                description: "Conversations with writers about their craft and creative process.",
+                link: "https://open.spotify.com/show/3mOIH4BV0QNZRjZXO2SWpR"
+            },
+            {
+                title: "The Ben and Marc Show",
+                description: "Discussions on tech, startups, and venture capital.",
+                link: "https://open.spotify.com/show/1uxSbwsqj50jE97e1qHDtE"
+            },
+            {
+                title: "We're Not Getting Any Younger... Yet",
+                description: "Exploring longevity, health, and the future of aging.",
+                link: "https://open.spotify.com/show/3Oy7DTtqKTiEAWEnDLWpBu"
+            }
+        ];
 
-    ];
-
-    const podcastList = document.getElementById('podcastList');
-    podcasts.forEach(podcast => {
-        const podcastCard = document.createElement('div');
-        podcastCard.className = 'col-md-4 mb-3';
-        podcastCard.innerHTML = `
-            <div class="card podcast-card">
-                <div class="card-body">
-                    <h5 class="card-title">${podcast.title}</h5>
-                    <p class="card-text">${podcast.description}</p>
-                    <a href="${podcast.link}" class="btn btn-primary" target="_blank">Listen</a>
-                </div>
-            </div>
-        `;
-        podcastList.appendChild(podcastCard);
+        const podcastList = document.getElementById('podcastList');
+        if (podcastList) {
+            podcasts.forEach(podcast => {
+                const podcastCard = document.createElement('div');
+                podcastCard.className = 'col-md-4 mb-3';
+                podcastCard.innerHTML = `
+                    <div class="card podcast-card">
+                        <div class="card-body">
+                            <h5 class="card-title">${podcast.title}</h5>
+                            <p class="card-text">${podcast.description}</p>
+                            <a href="${podcast.link}" class="btn btn-primary" target="_blank">Listen on Spotify</a>
+                        </div>
+                    </div>
+                `;
+                podcastList.appendChild(podcastCard);
+            });
+        } else {
+            console.error("Podcast list container not found");
+        }
     });
 
     // Photo gallery
