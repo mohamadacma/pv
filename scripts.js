@@ -28,7 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
     moviePosters.forEach((poster, index) => {
         const item = document.createElement('div');
         item.className = `carousel-item ${index === 0 ? 'active' : ''}`;
-        item.innerHTML = `<img src="${poster}" class="d-block w-100" alt="Movie Poster ${index + 1}">`;
+        item.innerHTML = `
+               <div class="movie-poster-container">
+                   <img src="${poster}" class="movie-poster" alt="Movie Poster ${index + 1}">
+               </div>
+           `;
         movieCarousel.appendChild(item);
     });
 
