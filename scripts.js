@@ -118,21 +118,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         const sprite = new THREE.Sprite(spriteMaterial);
         sprite.position.copy(position);
-        sprite.scale.set(1, 1, 1); // Adjust the size as needed
+        sprite.scale.set(1.5, 1.5, 1.5);
         sprite.userData = podcast;
         sphere.add(sprite);
     });
 
     function generateSpriteTexture(text) {
         const canvas = document.createElement('canvas');
-        const size = 256;
+        const size = 512;
         canvas.width = size;
         canvas.height = size;
         const context = canvas.getContext('2d');
-        context.fillStyle = 'rgba(0, 0, 0, 0.5)';
+        context.fillStyle = 'rgba(0, 0, 0, 0.7)';
         context.fillRect(0, 0, size, size);
-        context.fillStyle = 'white';
-        context.font = '20px Arial';
+        context.fillStyle = 'yellow';
+        context.font = '40px Arial';
         context.textAlign = 'center';
         context.textBaseline = 'middle';
         context.fillText(text, size / 2, size / 2);
