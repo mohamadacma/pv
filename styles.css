@@ -77,7 +77,7 @@ h2 {
 }
 
 #movieCarousel, #musicVisualizer {
-    height: 200px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,6 +87,7 @@ h2 {
 #movieCarousel .carousel-inner img {
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 #seriesGrid .card, #bookshelf .card, #photoGallery .card, #travelGallery .card {

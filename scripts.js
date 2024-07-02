@@ -15,8 +15,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    const moviePosters = [
+        'images/movie1.jpeg',
+        'images/movie2.jpeg',
+        'images/movie3.jpeg',
+        'images/movie4.jpeg',
+        'images/movie5.jpeg'
+    ];
+
     // Movie carousel
-    const movieCarousel = document.getElementById('movieCarousel');
+    const movieCarousel = document.querySelector('#movieCarousel .carousel-inner');
     moviePosters.forEach((poster, index) => {
         const item = document.createElement('div');
         item.className = `carousel-item ${index === 0 ? 'active' : ''}`;
