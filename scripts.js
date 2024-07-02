@@ -1,3 +1,5 @@
+import { OrbitControls } from 'https://unpkg.com/three/examples/jsm/controls/OrbitControls.js';
+
 document.addEventListener('DOMContentLoaded', function() {
     // Cinematic background
     const bg = document.getElementById('cinematic-bg');
@@ -86,18 +88,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Interactive Podcast Sphere
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer();
+    const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.getElementById('podcastList').innerHTML = '';
     document.getElementById('podcastList').appendChild(renderer.domElement);
 
     const geometry = new THREE.SphereGeometry(5, 32, 32);
-    const material = new THREE.MeshBasicMaterial({ color: 0x000000, wireframe: true });
+    const material = new THREE.MeshBasicMaterial({ color: 0x444444, wireframe: true });
     const sphere = new THREE.Mesh(geometry, material);
     scene.add(sphere);
 
-    camera.position.z = 10;
+    camera.position.z = 15;
+
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
 
     // Function to calculate positions on a sphere
     function spherePosition(i, total) {
@@ -118,31 +123,50 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         const sprite = new THREE.Sprite(spriteMaterial);
         sprite.position.copy(position);
-        sprite.scale.set(2.5, 2.5, 2.5);
+        sprite.scale.set(1, 1, 1);
         sprite.userData = podcast;
         sphere.add(sprite);
     });
 
     function generateSpriteTexture(text) {
         const canvas = document.createElement('canvas');
-        const size = 512; // Increase the canvas size
+        const size = 256;
         canvas.width = size;
         canvas.height = size;
         const context = canvas.getContext('2d');
-        context.fillStyle = 'rgba(0, 0, 0, 0.7)';
+        context.fillStyle = 'rgba(255, 255, 255, 0.8)';
         context.fillRect(0, 0, size, size);
-        context.fillStyle = 'yellow';
-        context.font = '60px Arial';
+        context.fillStyle = '#000000';
+        context.font = '24px Arial';
         context.textAlign = 'center';
         context.textBaseline = 'middle';
-        context.fillText(text, size / 2, size / 2);
+        
+        const words = text.split(' ');
+        let line = '';
+        let y = size / 2 - 24;
+        for (let i = 0; i < words.length; i++) {
+            const testLine = line + words[i] + ' ';
+            const metrics = context.measureText(testLine);
+            if (metrics.width > size - 20) {
+                context.fillText(line, size / 2, y);
+                line = words[i] + ' ';
+                y += 28;
+            } else {
+                line = testLine;
+            }
+        }
+        context.fillText(line, size / 2, y);
+        
         return canvas;
     }
 
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+
     function animate() {
         requestAnimationFrame(animate);
-        sphere.rotation.x += 0.001;
-        sphere.rotation.y += 0.001;
+        controls.update();
         renderer.render(scene, camera);
     }
     animate();
@@ -159,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const intersects = raycaster.intersectObjects(sphere.children);
 
         sphere.children.forEach(child => {
-            child.material.color.setHex(0xffd700);
+            child.material.color.setHex(0xffffff);
         });
 
         if (intersects.length > 0) {
