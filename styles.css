@@ -113,13 +113,20 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 300px;
     }
 
 #movieCarousel .carousel-inner img {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+#movieCarousel {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 #seriesGrid .card, #bookshelf .card, #photoGallery .card, #travelGallery .card {
@@ -204,4 +211,32 @@ footer {
     margin-top: 2rem;
     display: flex;
     justify-content: space-around;
+}
+.podcast-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #333;
+    transition: transform 0.3s;
+}
+
+.podcast-card:hover {
+    transform: scale(1.05);
+}
+
+.podcast-card .card-title {
+    color: #ffd700;
+}
+
+.podcast-card .card-text {
+    color: #e0e0e0;
+}
+
+.podcast-card .btn-primary {
+    background-color: #ffd700;
+    border-color: #ffd700;
+    color: #000;
+}
+
+.podcast-card .btn-primary:hover {
+    background-color: #e6c200;
+    border-color: #e6c200;
 }

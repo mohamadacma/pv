@@ -83,6 +83,35 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         bookshelf.appendChild(bookDiv);
     });
+    const podcasts = [
+        {
+            title: "The Joe Rogan Experience",
+            description: "Comedian Joe Rogan's long-form conversations with guests.",
+            link: "https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk"
+        },
+        {
+            title: "Hardcore History",
+            description: "Dan Carlin's deep dives into historical topics.",
+            link: "https://www.dancarlin.com/hardcore-history-series/"
+        },
+
+    ];
+
+    const podcastList = document.getElementById('podcastList');
+    podcasts.forEach(podcast => {
+        const podcastCard = document.createElement('div');
+        podcastCard.className = 'col-md-4 mb-3';
+        podcastCard.innerHTML = `
+            <div class="card podcast-card">
+                <div class="card-body">
+                    <h5 class="card-title">${podcast.title}</h5>
+                    <p class="card-text">${podcast.description}</p>
+                    <a href="${podcast.link}" class="btn btn-primary" target="_blank">Listen</a>
+                </div>
+            </div>
+        `;
+        podcastList.appendChild(podcastCard);
+    });
 
     // Photo gallery
     const photos = [
