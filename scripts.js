@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Series grid
-    const series = ['The Leftovers', 'Game of Thrones', 'Blackadder', 'Misfits'];
+    const series = ['The Leftovers', 'Inside No.8', 'Blackadder', 'Misfits'];
     const seriesGrid = document.getElementById('seriesGrid');
     series.forEach(show => {
         const card = document.createElement('div');
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="card-body">
                         <h5 class="card-title">${podcast.title}</h5>
                         <p class="card-text">${podcast.description}</p>
-                        <a href="${podcast.link}" class="btn btn-primary" target="_blank">Listen on Spotify</a>
+                        <a href="${podcast.link}" class="btn btn-primary" target="_blank">Check it</a>
                     </div>
                 </div>
             `;
@@ -173,6 +173,106 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error("Podcast list container not found");
     }
+    // Interactive Podcast Sphere
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('podcastList').innerHTML = '';
+        document.getElementById('podcastList').appendChild(renderer.domElement);
+
+        const geometry = new THREE.SphereGeometry(5, 32, 32);
+        const material = new THREE.MeshBasicMaterial({ color: 0x000000, wireframe: true });
+        const sphere = new THREE.Mesh(geometry, material);
+        scene.add(sphere);
+
+        camera.position.z = 10;
+
+        // Function to calculate positions on a sphere
+        function spherePosition(i, total) {
+            const phi = Math.acos(-1 + (2 * i) / total);
+            const theta = Math.sqrt(total * Math.PI) * phi;
+            return new THREE.Vector3(
+                Math.cos(theta) * Math.sin(phi),
+                Math.sin(theta) * Math.sin(phi),
+                Math.cos(phi)
+            ).multiplyScalar(5);
+        }
+
+        podcasts.forEach((podcast, index) => {
+            const position = spherePosition(index, podcasts.length);
+            const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ color: 0xffd700 }));
+            sprite.position.copy(position);
+            sprite.scale.set(0.5, 0.5, 0.5);
+            sprite.userData = podcast;
+            sphere.add(sprite);
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+            sphere.rotation.x += 0.001;
+            sphere.rotation.y += 0.001;
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Add interaction
+        const raycaster = new THREE.Raycaster();
+        const mouse = new THREE.Vector2();
+
+        function onMouseMove(event) {
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(sphere.children);
+
+            sphere.children.forEach(child => {
+                child.material.color.setHex(0xffd700);
+            });
+
+            if (intersects.length > 0) {
+                intersects[0].object.material.color.setHex(0xff0000);
+                showPodcastInfo(intersects[0].object.userData);
+            } else {
+                hidePodcastInfo();
+            }
+        }
+
+        window.addEventListener('mousemove', onMouseMove, false);
+
+        function showPodcastInfo(podcast) {
+            const infoDiv = document.getElementById('podcastInfo') || document.createElement('div');
+            infoDiv.id = 'podcastInfo';
+            infoDiv.innerHTML = `
+                <h3>${podcast.title}</h3>
+                <p>${podcast.description}</p>
+                <a href="${podcast.link}" target="_blank" class="btn btn-primary">Check it</a>
+            `;
+            infoDiv.style.position = 'absolute';
+            infoDiv.style.top = '10px';
+            infoDiv.style.left = '10px';
+            infoDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+            infoDiv.style.color = 'white';
+            infoDiv.style.padding = '10px';
+            infoDiv.style.borderRadius = '5px';
+            document.getElementById('podcastList').appendChild(infoDiv);
+        }
+
+        function hidePodcastInfo() {
+            const infoDiv = document.getElementById('podcastInfo');
+            if (infoDiv) infoDiv.remove();
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', onWindowResize, false);
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+    });
 
     // Photo gallery
     const photos = [
