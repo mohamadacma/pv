@@ -1,13 +1,22 @@
 import { OrbitControls } from 'https://unpkg.com/three/examples/jsm/controls/OrbitControls.js';
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Cinematic background
+    initCinematicBackground();
+    initSmoothScrolling();
+    initPodcastSphere();
+    initTypewriter();
+    initProjectVisibility();
+    initPhotoGallery();
+});
+
+function initCinematicBackground() {
     const bg = document.getElementById('cinematic-bg');
     setInterval(() => {
         bg.style.background = `linear-gradient(${Math.random() * 360}deg, #000000, #1a1a1a)`;
     }, 5000);
+}
 
-    // Smooth scrolling
+function initSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -16,8 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+}
 
-    // Podcasts data
+function initPodcastSphere() {
     const podcasts = [
         {
             title: "All-In Podcast",
@@ -86,7 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
-    // Interactive Podcast Sphere
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -104,7 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
 
-    // Function to calculate positions on a sphere
     function spherePosition(i, total) {
         const phi = Math.acos(-1 + (2 * i) / total);
         const theta = Math.sqrt(total * Math.PI) * phi;
@@ -140,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
         context.font = '24px Arial';
         context.textAlign = 'center';
         context.textBaseline = 'middle';
-        
+
         const words = text.split(' ');
         let line = '';
         let y = size / 2 - 24;
@@ -156,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         context.fillText(line, size / 2, y);
-        
+
         return canvas;
     }
 
@@ -171,7 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     animate();
 
-    // Add interaction
     const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2();
 
@@ -219,7 +226,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (infoDiv) infoDiv.remove();
     }
 
-    // Handle window resize
     window.addEventListener('resize', onWindowResize, false);
 
     function onWindowResize() {
@@ -227,19 +233,72 @@ document.addEventListener('DOMContentLoaded', function() {
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
     }
-    function checkVisibility() {
-      const elements = document.querySelectorAll('.project-details, .project-visuals');
-      elements.forEach(el => {
-        if (isElementInViewport(el)) {
-          el.classList.add('visible');
+}
+
+function initTypewriter() {
+    const text = `Hello! I'm Mohamad!
+    Welcome to the Neo-Junto cafe,
+    where ideas brew and minds percolate.
+    Grab a seat, a quill, and let's ignite
+    the flames of curiosity and discourse.
+    Make yourself at home in this haven
+    of intellectual ferment and friendly debate.
+    What groundbreaking thoughts shall we explore today?`;
+
+    const typingElement = document.querySelector('.typewriter-text');
+    let i = 0;
+
+    function typeWriter() {
+        if (i < text.length) {
+            typingElement.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 50); // Adjust typing speed here
+        } else {
+            addInteractiveElements();
         }
-      });
     }
 
-    // Add scroll event listener
-    window.addEventListener('scroll', checkVisibility);
+    function addInteractiveElements() {
+        const container = document.getElementById('welcome-message');
 
-    // Photo gallery
+        const quill = document.createElement('img');
+        quill.src = 'quill-pen-icon.png';
+        quill.className = 'quill-icon';
+        container.appendChild(quill);
+
+        const coffeeStain = document.createElement('div');
+        coffeeStain.className = 'coffee-stain';
+        container.appendChild(coffeeStain);
+    }
+
+    typeWriter();
+}
+
+function initProjectVisibility() {
+    function checkVisibility() {
+        const elements = document.querySelectorAll('.project-details, .project-visuals');
+        elements.forEach(el => {
+            if (isElementInViewport(el)) {
+                el.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Initial check
+}
+
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function initPhotoGallery() {
     const photos = [
         'images/image6.jpeg',
         'images/image7.jpeg',
@@ -264,4 +323,4 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         img.src = photo;
     });
-});
+}
