@@ -227,6 +227,17 @@ document.addEventListener('DOMContentLoaded', function() {
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
     }
+    function checkVisibility() {
+      const elements = document.querySelectorAll('.project-details, .project-visuals');
+      elements.forEach(el => {
+        if (isElementInViewport(el)) {
+          el.classList.add('visible');
+        }
+      });
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', checkVisibility);
 
     // Photo gallery
     const photos = [
