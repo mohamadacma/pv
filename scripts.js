@@ -30,11 +30,9 @@ function initSmoothScrolling() {
 }
 
 function initTypewriter() {
-    const text = `Hello! I'm Mohamad!
-Welcome to the Neo-Junto cafe!
-`;
-
+    const text = `Hello! I'm Mohamad!\nWelcome to the Neo-Junto cafe!`;
     const typingElement = document.querySelector('.typewriter-text');
+    typingElement.textContent = '';
     let i = 0;
 
     function typeWriter() {
@@ -267,11 +265,15 @@ function onWindowResize() {
 
 function loadPhotoGallery() {
     const photos = [
-        'images/image6.jpeg',
-        'images/image7.jpeg',
-        'images/image8.jpeg',
-        'images/image9.jpeg'
-    ];
+            'images/image6.jpeg',
+            'images/image7.jpeg',
+            'images/image8.jpeg',
+            'images/image9.jpeg',
+            'images/image10.jpeg',
+            'images/image12.jpeg',
+            'images/image13.jpeg',
+            'images/image14.jpeg'
+        ];
     const photoGallery = document.getElementById('photoGallery');
     photos.forEach(photo => {
         const img = new Image();
