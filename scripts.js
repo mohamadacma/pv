@@ -46,6 +46,7 @@ function initTypewriter() {
 
     typeWriter();
 }
+
 $('#demoModal').on('show.bs.modal', function (e) {
     $("#demoVideo").attr('src', "https://www.youtube.com/embed/ZFs42j0D8qI");
 })
@@ -61,6 +62,7 @@ function lazyLoadImages() {
         img.onload = () => img.classList.add('loaded');
     });
 }
+
 function showGrid() {
     document.querySelector('.grid-container').style.display = 'grid';
     document.getElementById('podcastList').style.display = 'none';
