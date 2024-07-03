@@ -1,13 +1,16 @@
 import { OrbitControls } from 'https://unpkg.com/three/examples/jsm/controls/OrbitControls.js';
 
 document.addEventListener('DOMContentLoaded', function() {
+    initEssentials();
+    lazyLoadImages();
+    initIntersectionObserver();
+});
+
+function initEssentials() {
     initCinematicBackground();
     initSmoothScrolling();
-    initPodcastSphere();
     initTypewriter();
-    initProjectVisibility();
-    initPhotoGallery();
-});
+}
 
 function initCinematicBackground() {
     const bg = document.getElementById('cinematic-bg');
@@ -27,73 +30,92 @@ function initSmoothScrolling() {
     });
 }
 
+function initTypewriter() {
+    const text = `Hello! I'm Mohamad!
+Welcome to the Neo-Junto cafe,
+where ideas brew and minds percolate.
+Grab a seat, a quill, and let's ignite
+the flames of curiosity and discourse.
+Make yourself at home in this haven
+of intellectual ferment and friendly debate.
+What groundbreaking thoughts shall we explore today?`;
+
+    const typingElement = document.querySelector('.typewriter-text');
+    let i = 0;
+
+    function typeWriter() {
+        if (i < text.length) {
+            typingElement.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 50);
+        } else {
+            addInteractiveElements();
+        }
+    }
+
+    typeWriter();
+}
+
+function addInteractiveElements() {
+    const container = document.getElementById('welcome-message');
+
+    const quill = document.createElement('img');
+    quill.src = 'quill-pen-icon.png';
+    quill.className = 'quill-icon';
+    container.appendChild(quill);
+
+    const coffeeStain = document.createElement('div');
+    coffeeStain.className = 'coffee-stain';
+    container.appendChild(coffeeStain);
+}
+
+function lazyLoadImages() {
+    const images = document.querySelectorAll('img.lazy');
+    images.forEach(img => {
+        img.src = img.dataset.src;
+        img.onload = () => img.classList.add('loaded');
+    });
+}
+
+function initIntersectionObserver() {
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.id === 'podcastList') {
+                    initPodcastSphere();
+                } else if (entry.target.id === 'photoGallery') {
+                    loadPhotoGallery();
+                }
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    observer.observe(document.querySelector('#podcastList'));
+    observer.observe(document.querySelector('#photoGallery'));
+}
+
 function initPodcastSphere() {
     const podcasts = [
-        {
-            title: "All-In Podcast",
-            description: "Industry veterans discuss tech, economics, and politics.",
-            link: "https://open.spotify.com/show/2IqXAVFR4e0Bmyjsdc8QzF"
-        },
-        {
-            title: "Plain English with Derek Thompson",
-            description: "Clear explanations of the most interesting stories in business, science, and technology.",
-            link: "https://open.spotify.com/show/51AAeGPvCO4ScUmXxP6Lgh"
-        },
-        {
-            title: "Dwarkesh Podcast",
-            description: "Conversations with economists, scientists, and technologists.",
-            link: "https://open.spotify.com/show/3iJpUGgGD6XOJN5PT5kKoq"
-        },
-        {
-            title: "EconTalk",
-            description: "Economics conversations for the curious mind.",
-            link: "https://open.spotify.com/show/3TeemcPgTqNmFmdHHeuAVh"
-        },
-        {
-            title: "Conversations with Tyler",
-            description: "In-depth conversations with thinkers across various fields.",
-            link: "https://open.spotify.com/show/2Cr8dqJunkDZEq3fUQVi2n"
-        },
-        {
-            title: "Switched on Pop",
-            description: "Analyzing pop music and its cultural impact.",
-            link: "https://open.spotify.com/show/1sgBmMBsvTUssYVGAEgrrI"
-        },
-        {
-            title: "This American Life",
-            description: "Weekly public radio program and podcast.",
-            link: "https://open.spotify.com/show/2KYXQMYQSGDq1O5wYGYruz"
-        },
-        {
-            title: "99% Invisible",
-            description: "Design, architecture, and the 99% invisible activity that shapes our world.",
-            link: "https://open.spotify.com/show/2VRS1IJCTn2Nlkg33ZVfkM"
-        },
-        {
-            title: "The Ezra Klein Show",
-            description: "In-depth conversations about ideas that matter.",
-            link: "https://open.spotify.com/show/3oB5noYIwEB2dMAREj2F7S"
-        },
-        {
-            title: "The Morgan Housel Podcast",
-            description: "Exploring the psychology of money and investing.",
-            link: "https://open.spotify.com/show/7ySLbGkTqTQC4T1Ssb5bcE"
-        },
-        {
-            title: "How I Write",
-            description: "Conversations with writers about their craft and creative process.",
-            link: "https://open.spotify.com/show/3mOIH4BV0QNZRjZXO2SWpR"
-        },
-        {
-            title: "The Ben and Marc Show",
-            description: "Discussions on tech, startups, and venture capital.",
-            link: "https://open.spotify.com/show/1uxSbwsqj50jE97e1qHDtE"
-        },
-        {
-            title: "We're Not Getting Any Younger... Yet",
-            description: "Exploring longevity, health, and the future of aging.",
-            link: "https://open.spotify.com/show/3Oy7DTtqKTiEAWEnDLWpBu"
-        }
+        { title: "All-In Podcast", description: "Industry veterans discuss tech, economics, and politics.", link: "https://open.spotify.com/show/2IqXAVFR4e0Bmyjsdc8QzF" },
+        { title: "Plain English with Derek Thompson", description: "Clear explanations of the most interesting stories in business, science, and technology.", link: "https://open.spotify.com/show/51AAeGPvCO4ScUmXxP6Lgh" },
+        { title: "Dwarkesh Podcast", description: "Conversations with economists, scientists, and technologists.", link: "https://open.spotify.com/show/3iJpUGgGD6XOJN5PT5kKoq" },
+        { title: "EconTalk", description: "Economics conversations for the curious mind.", link: "https://open.spotify.com/show/3TeemcPgTqNmFmdHHeuAVh" },
+        { title: "Conversations with Tyler", description: "In-depth conversations with thinkers across various fields.", link: "https://open.spotify.com/show/2Cr8dqJunkDZEq3fUQVi2n" },
+        { title: "Switched on Pop", description: "Analyzing pop music and its cultural impact.", link: "https://open.spotify.com/show/1sgBmMBsvTUssYVGAEgrrI" },
+        { title: "This American Life", description: "Weekly public radio program and podcast.", link: "https://open.spotify.com/show/2KYXQMYQSGDq1O5wYGYruz" },
+        { title: "99% Invisible", description: "Design, architecture, and the 99% invisible activity that shapes our world.", link: "https://open.spotify.com/show/2VRS1IJCTn2Nlkg33ZVfkM" },
+        { title: "The Ezra Klein Show", description: "In-depth conversations about ideas that matter.", link: "https://open.spotify.com/show/3oB5noYIwEB2dMAREj2F7S" },
+        { title: "The Morgan Housel Podcast", description: "Exploring the psychology of money and investing.", link: "https://open.spotify.com/show/7ySLbGkTqTQC4T1Ssb5bcE" },
+        { title: "How I Write", description: "Conversations with writers about their craft and creative process.", link: "https://open.spotify.com/show/3mOIH4BV0QNZRjZXO2SWpR" },
+        { title: "The Ben and Marc Show", description: "Discussions on tech, startups, and venture capital.", link: "https://open.spotify.com/show/1uxSbwsqj50jE97e1qHDtE" },
+        { title: "We're Not Getting Any Younger... Yet", description: "Exploring longevity, health, and the future of aging.", link: "https://open.spotify.com/show/3Oy7DTtqKTiEAWEnDLWpBu" }
     ];
 
     const scene = new THREE.Scene();
@@ -113,16 +135,6 @@ function initPodcastSphere() {
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
 
-    function spherePosition(i, total) {
-        const phi = Math.acos(-1 + (2 * i) / total);
-        const theta = Math.sqrt(total * Math.PI) * phi;
-        return new THREE.Vector3(
-            Math.cos(theta) * Math.sin(phi),
-            Math.sin(theta) * Math.sin(phi),
-            Math.cos(phi)
-        ).multiplyScalar(5);
-    }
-
     podcasts.forEach((podcast, index) => {
         const position = spherePosition(index, podcasts.length);
         const spriteMaterial = new THREE.SpriteMaterial({
@@ -136,38 +148,6 @@ function initPodcastSphere() {
         sphere.add(sprite);
     });
 
-    function generateSpriteTexture(text) {
-        const canvas = document.createElement('canvas');
-        const size = 256;
-        canvas.width = size;
-        canvas.height = size;
-        const context = canvas.getContext('2d');
-        context.fillStyle = 'rgba(255, 255, 255, 0.8)';
-        context.fillRect(0, 0, size, size);
-        context.fillStyle = '#000000';
-        context.font = '24px Arial';
-        context.textAlign = 'center';
-        context.textBaseline = 'middle';
-
-        const words = text.split(' ');
-        let line = '';
-        let y = size / 2 - 24;
-        for (let i = 0; i < words.length; i++) {
-            const testLine = line + words[i] + ' ';
-            const metrics = context.measureText(testLine);
-            if (metrics.width > size - 20) {
-                context.fillText(line, size / 2, y);
-                line = words[i] + ' ';
-                y += 28;
-            } else {
-                line = testLine;
-            }
-        }
-        context.fillText(line, size / 2, y);
-
-        return canvas;
-    }
-
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
@@ -179,126 +159,104 @@ function initPodcastSphere() {
     }
     animate();
 
-    const raycaster = new THREE.Raycaster();
-    const mouse = new THREE.Vector2();
-
-    function onMouseMove(event) {
-        mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-        mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
-
-        raycaster.setFromCamera(mouse, camera);
-        const intersects = raycaster.intersectObjects(sphere.children);
-
-        sphere.children.forEach(child => {
-            child.material.color.setHex(0xffffff);
-        });
-
-        if (intersects.length > 0) {
-            intersects[0].object.material.color.setHex(0xff0000);
-            showPodcastInfo(intersects[0].object.userData);
-        } else {
-            hidePodcastInfo();
-        }
-    }
-
     window.addEventListener('mousemove', onMouseMove, false);
-
-    function showPodcastInfo(podcast) {
-        const infoDiv = document.getElementById('podcastInfo') || document.createElement('div');
-        infoDiv.id = 'podcastInfo';
-        infoDiv.innerHTML = `
-            <h3>${podcast.title}</h3>
-            <p>${podcast.description}</p>
-            <a href="${podcast.link}" target="_blank" class="btn btn-primary">Check it</a>
-        `;
-        infoDiv.style.position = 'absolute';
-        infoDiv.style.top = '10px';
-        infoDiv.style.left = '10px';
-        infoDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-        infoDiv.style.color = 'white';
-        infoDiv.style.padding = '10px';
-        infoDiv.style.borderRadius = '5px';
-        document.getElementById('podcastList').appendChild(infoDiv);
-    }
-
-    function hidePodcastInfo() {
-        const infoDiv = document.getElementById('podcastInfo');
-        if (infoDiv) infoDiv.remove();
-    }
-
     window.addEventListener('resize', onWindowResize, false);
-
-    function onWindowResize() {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-    }
 }
 
-function initTypewriter() {
-    const text = `Hello! I'm Mohamad!
-    Welcome to the Neo-Junto cafe,
-    where ideas brew and minds percolate.
-    Grab a seat, a quill, and let's ignite
-    the flames of curiosity and discourse.
-    Make yourself at home in this haven
-    of intellectual ferment and friendly debate.
-    What groundbreaking thoughts shall we explore today?`;
+function spherePosition(i, total) {
+    const phi = Math.acos(-1 + (2 * i) / total);
+    const theta = Math.sqrt(total * Math.PI) * phi;
+    return new THREE.Vector3(
+        Math.cos(theta) * Math.sin(phi),
+        Math.sin(theta) * Math.sin(phi),
+        Math.cos(phi)
+    ).multiplyScalar(5);
+}
 
-    const typingElement = document.querySelector('.typewriter-text');
-    let i = 0;
+function generateSpriteTexture(text) {
+    const canvas = document.createElement('canvas');
+    const size = 256;
+    canvas.width = size;
+    canvas.height = size;
+    const context = canvas.getContext('2d');
+    context.fillStyle = 'rgba(255, 255, 255, 0.8)';
+    context.fillRect(0, 0, size, size);
+    context.fillStyle = '#000000';
+    context.font = '24px Arial';
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
 
-    function typeWriter() {
-        if (i < text.length) {
-            typingElement.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 50); // Adjust typing speed here
+    const words = text.split(' ');
+    let line = '';
+    let y = size / 2 - 24;
+    for (let i = 0; i < words.length; i++) {
+        const testLine = line + words[i] + ' ';
+        const metrics = context.measureText(testLine);
+        if (metrics.width > size - 20) {
+            context.fillText(line, size / 2, y);
+            line = words[i] + ' ';
+            y += 28;
         } else {
-            addInteractiveElements();
+            line = testLine;
         }
     }
+    context.fillText(line, size / 2, y);
 
-    function addInteractiveElements() {
-        const container = document.getElementById('welcome-message');
-
-        const quill = document.createElement('img');
-        quill.src = 'quill-pen-icon.png';
-        quill.className = 'quill-icon';
-        container.appendChild(quill);
-
-        const coffeeStain = document.createElement('div');
-        coffeeStain.className = 'coffee-stain';
-        container.appendChild(coffeeStain);
-    }
-
-    typeWriter();
+    return canvas;
 }
 
-function initProjectVisibility() {
-    function checkVisibility() {
-        const elements = document.querySelectorAll('.project-details, .project-visuals');
-        elements.forEach(el => {
-            if (isElementInViewport(el)) {
-                el.classList.add('visible');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', checkVisibility);
-    checkVisibility(); // Initial check
-}
-
-function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+function onMouseMove(event) {
+    const mouse = new THREE.Vector2(
+        (event.clientX / window.innerWidth) * 2 - 1,
+        -(event.clientY / window.innerHeight) * 2 + 1
     );
+
+    const raycaster = new THREE.Raycaster();
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(sphere.children);
+
+    sphere.children.forEach(child => {
+        child.material.color.setHex(0xffffff);
+    });
+
+    if (intersects.length > 0) {
+        intersects[0].object.material.color.setHex(0xff0000);
+        showPodcastInfo(intersects[0].object.userData);
+    } else {
+        hidePodcastInfo();
+    }
 }
 
-function initPhotoGallery() {
+function showPodcastInfo(podcast) {
+    const infoDiv = document.getElementById('podcastInfo') || document.createElement('div');
+    infoDiv.id = 'podcastInfo';
+    infoDiv.innerHTML = `
+        <h3>${podcast.title}</h3>
+        <p>${podcast.description}</p>
+        <a href="${podcast.link}" target="_blank" class="btn btn-primary">Check it</a>
+    `;
+    infoDiv.style.position = 'absolute';
+    infoDiv.style.top = '10px';
+    infoDiv.style.left = '10px';
+    infoDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+    infoDiv.style.color = 'white';
+    infoDiv.style.padding = '10px';
+    infoDiv.style.borderRadius = '5px';
+    document.getElementById('podcastList').appendChild(infoDiv);
+}
+
+function hidePodcastInfo() {
+    const infoDiv = document.getElementById('podcastInfo');
+    if (infoDiv) infoDiv.remove();
+}
+
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+function loadPhotoGallery() {
     const photos = [
         'images/image6.jpeg',
         'images/image7.jpeg',
