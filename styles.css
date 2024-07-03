@@ -66,18 +66,12 @@ h2 {
 }
 
 .typewriter-text {
-    display: inline-block;
     overflow: hidden;
-    border-right: .15em solid transparent;
-    white-space: pre-line;
-    margin: 0;
+    border-right: .15em solid #ffd700;
+    white-space: nowrap;
+    margin: 0 auto;
     letter-spacing: .15em;
     animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-}
-
-.typewriter-container {
-    display: inline-block;
-    position: relative;
 }
 
 @keyframes typing {
@@ -129,149 +123,4 @@ h2 {
 
 .lazy.loaded {
     opacity: 1;
-}
-.category-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.category-item {
-    width: 200px;
-    height: 200px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    margin: 10px;
-    padding: 20px;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.category-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
-}
-
-.category-item h3 {
-    color: #ffd700;
-    margin-bottom: 15px;
-}
-#movies, #tv {
-    align-self: flex-start;
-}
-
-#music {
-    align-self: center;
-}
-
-#podcasts {
-    width: 300px;
-    height: 100px;
-    border-radius: 100px;
-    align-self: flex-end;
-}
-
-#books {
-    align-self: flex-end;
-}
-.face-container {
-    position: relative;
-    width: 600px;
-    height: 600px;
-    margin: 50px auto;
-}
-
-.category-item {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    padding: 20px;
-    text-align: center;
-}
-
-
-.btn-neon {
-    color: #03e9f4;
-    font-size: 14px;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: 0.5s;
-    letter-spacing: 2px;
-    border: 1px solid #03e9f4;
-    background: transparent;
-    padding: 10px;
-    margin: 5px;
-    display: inline-block;
-}
-
-.btn-neon:hover {
-    background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
-}
-
-.category-item:hover {
-    transform: scale(1.1);
-}
-
-.eye:hover {
-    transform: translateY(-10px);
-}
-
-.mouth:hover, .chin:hover {
-    transform: translateX(-50%) scale(1.1);
-}
-
-.btn-neon {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    color: #03e9f4;
-    font-size: 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: 0.5s;
-    letter-spacing: 2px;
-    border: 1px solid #03e9f4;
-    background: transparent;
-    margin: 10px 0;
-}
-
-.btn-neon:hover {
-    background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
-}
-
-.glow-text {
-    color: #fff;
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de;
-}
-
-#podcasts {
-    width: 95%;
-}
-
-#podcasts .btn-neon {
-    margin: 10px;
 }
