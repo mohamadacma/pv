@@ -199,110 +199,12 @@ h2 {
     transition: all 0.3s ease;
     padding: 20px;
     text-align: center;
-}
 
-.eye {
-    width: 150px;
-    height: 150px;
-    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    top: 50px;
-}
-
-.left-eye {
-    left: 100px;
-}
-
-.right-eye {
-    right: 100px;
-}
-
-.nose {
-    width: 180px;
-    height: 180px;
-    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    top: 220px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.mouth {
-    width: 300px;
-    height: 100px;
-    border-radius: 0 0 150px 150px;
-    bottom: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.chin {
-    width: 200px;
-    height: 100px;
-    border-radius: 100px 100px 0 0;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.btn-neon {
-    color: #03e9f4;
-    font-size: 14px;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: 0.5s;
-    letter-spacing: 2px;
-    border: 1px solid #03e9f4;
-    background: transparent;
-    padding: 10px;
-    margin: 5px;
-    display: inline-block;
-}
-
-.btn-neon:hover {
-    background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
-}
 
 .category-item:hover {
     transform: scale(1.1);
 }
 
-.eye:hover {
-    transform: translateY(-10px);
-}
-
-.mouth:hover, .chin:hover {
-    transform: translateX(-50%) scale(1.1);
-}
-
-.btn-neon {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    color: #03e9f4;
-    font-size: 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: 0.5s;
-    letter-spacing: 2px;
-    border: 1px solid #03e9f4;
-    background: transparent;
-    margin: 10px 0;
-}
-
-.btn-neon:hover {
-    background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
-}
 
 .glow-text {
     color: #fff;
@@ -318,50 +220,56 @@ h2 {
 }
 .smiley-face-container {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     margin: 50px auto;
-    background-color: #ffd700;
+    background-color: #121212;
     border-radius: 50%;
-    overflow: hidden;
+    border: 2px solid #03e9f4;
 }
 
 .eye {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: #121212;
+    width: 80px;
+    height: 80px;
+    background-color: #03e9f4;
     border-radius: 50%;
-    top: 100px;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .left-eye {
-    left: 100px;
+    left: 80px;
 }
 
 .right-eye {
-    right: 100px;
+    right: 80px;
 }
 
 .nose {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: #121212;
+    width: 40px;
+    height: 40px;
+    background-color: #03e9f4;
     border-radius: 50%;
-    top: 230px;
+    top: 180px;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mouth {
     position: absolute;
-    width: 300px;
-    height: 150px;
-    border-radius: 0 0 150px 150px;
-    border: 20px solid #121212;
+    width: 240px;
+    height: 120px;
+    border-radius: 0 0 120px 120px;
+    border: 10px solid #03e9f4;
     border-top: none;
-    bottom: 80px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -370,33 +278,30 @@ h2 {
     align-items: center;
 }
 
-.eye .btn-neon, .nose .btn-neon, .mouth .btn-neon {
+.btn-neon {
     font-size: 12px;
     padding: 5px 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 90%;
-}
-
-.eye:hover, .nose:hover {
-    transform: scale(1.1);
-}
-
-.mouth:hover {
-    transform: translateX(-50%) scale(1.05);
-}
-
-.btn-neon {
+    margin: 5px;
     background-color: rgba(0, 0, 0, 0.7);
     color: #03e9f4;
     border: 1px solid #03e9f4;
+    border-radius: 20px;
     transition: all 0.3s ease;
-    margin: 5px;
+    text-decoration: none;
+    text-align: center;
 }
 
 .btn-neon:hover {
     background-color: #03e9f4;
     color: #121212;
     box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4;
+}
+
+.eye .btn-neon, .nose .btn-neon {
+    width: 90%;
+    font-size: 10px;
+}
+
+.mouth .btn-neon {
+    width: 80%;
 }
