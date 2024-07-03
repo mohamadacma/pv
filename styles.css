@@ -66,12 +66,18 @@ h2 {
 }
 
 .typewriter-text {
+    display: inline-block;
     overflow: hidden;
-    border-right: .15em solid #ffd700;
-    white-space: nowrap;
-    margin: 0 auto;
+    border-right: .15em solid transparent;
+    white-space: pre-line;
+    margin: 0;
     letter-spacing: .15em;
     animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+.typewriter-container {
+    display: inline-block;
+    position: relative;
 }
 
 @keyframes typing {
@@ -218,15 +224,6 @@ h2 {
     left: 50%;
     transform: translateX(-50%);
 }
-.cursor {
-    opacity: 1;
-    animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
 
 .mouth {
     width: 300px;
@@ -318,4 +315,88 @@ h2 {
 
 #podcasts .btn-neon {
     margin: 10px;
+}
+.smiley-face-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    background-color: #ffd700;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.eye {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #121212;
+    border-radius: 50%;
+    top: 100px;
+}
+
+.left-eye {
+    left: 100px;
+}
+
+.right-eye {
+    right: 100px;
+}
+
+.nose {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #121212;
+    border-radius: 50%;
+    top: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mouth {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    border-radius: 0 0 150px 150px;
+    border: 20px solid #121212;
+    border-top: none;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.eye .btn-neon, .nose .btn-neon, .mouth .btn-neon {
+    font-size: 12px;
+    padding: 5px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+}
+
+.eye:hover, .nose:hover {
+    transform: scale(1.1);
+}
+
+.mouth:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.btn-neon {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #03e9f4;
+    border: 1px solid #03e9f4;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.btn-neon:hover {
+    background-color: #03e9f4;
+    color: #121212;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4;
 }
