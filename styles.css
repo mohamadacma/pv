@@ -39,9 +39,12 @@ main {
 }
 
 .section {
-    background-color: #121212;
+    margin-bottom: 3em;
     padding: 2em;
-    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .section:hover {
@@ -178,14 +181,23 @@ h2 {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }.category-container {
      display: flex;
-     flex-direction: column;
-     gap: 1.5em;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     padding: 20px;
  }
 
  .category-item {
+     width: 45%;
+     min-width: 250px;
      background-color: rgba(255, 255, 255, 0.1);
-     border-radius: 10px;
-     padding: 1em;
+     border-radius: 15px;
+     margin: 20px;
+     padding: 20px;
+     transition: all 0.3s ease;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
  }
 
  .category-item:hover {
@@ -194,28 +206,34 @@ h2 {
  }
 
  .category-item h3 {
-     color: #ffffff;
-     margin-bottom: 0.5em;
-     font-size: 1.2em;
+     color: #ffd700;
+     margin-bottom: 15px;
  }
 
-.btn-neon {
-    display: inline-block;
-    padding: 0.5em 1em;
-    margin: 0.3em;
-    color: #00ffff;
-    border: 1px solid #00ffff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 0.9em;
-    transition: all 0.3s ease;
-}
+ .btn-neon {
+     position: relative;
+     display: inline-block;
+     padding: 10px 20px;
+     color: #03e9f4;
+     font-size: 16px;
+     text-decoration: none;
+     text-transform: uppercase;
+     overflow: hidden;
+     transition: 0.5s;
+     letter-spacing: 2px;
+     border: 1px solid #03e9f4;
+     background: transparent;
+     margin: 10px 0;
+ }
 
-.btn-neon:hover {
-    background-color: #00ffff;
-    color: #000000;
-    box-shadow: 0 0 10px #00ffff;
-}
+ .btn-neon:hover {
+     background: #03e9f4;
+     color: #050801;
+     box-shadow: 0 0 5px #03e9f4,
+                 0 0 25px #03e9f4,
+                 0 0 50px #03e9f4,
+                 0 0 100px #03e9f4;
+ }
 
  .glow-text {
      color: #fff;
@@ -229,96 +247,51 @@ h2 {
  #podcasts .btn-neon {
      margin: 10px;
  }
- .section {
-   background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
-   padding: 2em;
-   border-radius: 15px;
-   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-   position: relative;
-   overflow: hidden;
- }
+.section {
+    background-color: #121212;
+    padding: 2em;
+    color: #ffffff;
+}
 
- .neon-text {
-     color: #ffffff;
-     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de;
-     font-size: 2.5em;
-     margin-bottom: 1em;
- }
+.neon-text {
+    color: #ffffff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
 
- .project-card {
-   background: rgba(0, 0, 0, 0.5);
-   border-radius: 10px;
-   padding: 2em;
-   transition: transform 0.6s;
-   transform-style: preserve-3d;
- }
+.category-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
 
- .project-card:hover {
-   transform: rotateY(180deg);
- }
+.category-item {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 1em;
+}
 
- .card-front, .card-back {
-   backface-visibility: hidden;
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
- }
+.category-item h3 {
+    color: #ffffff;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+}
 
- .card-back {
-   transform: rotateY(180deg);
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
- }
+.btn-neon {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0.3em 0;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
 
- .steps .step {
-   transition: all 0.3s ease;
-   cursor: pointer;
- }
-
- .steps .step:hover {
-   transform: translateX(10px);
-   color: #00ffff;
- }
-
- .tech-icons {
-   display: flex;
-   justify-content: space-around;
-   margin-top: 1em;
- }
-
- .tech-icon {
-   width: 50px;
-   height: 50px;
-   background-size: contain;
-   background-repeat: no-repeat;
-   transition: transform 0.3s ease;
- }
-
- .tech-icon:hover {
-   transform: scale(1.2);
- }
-
- .btn-neon {
-   position: relative;
-   display: inline-block;
-   padding: 15px 30px;
-   color: #03e9f4;
-   text-transform: uppercase;
-   letter-spacing: 4px;
-   text-decoration: none;
-   font-size: 24px;
-   overflow: hidden;
-   transition: 0.2s;
-   margin: 10px;
- }
-
- .btn-neon:hover {
-   color: #255784;
-   background: #03e9f4;
-   box-shadow: 0 0 10px #03e9f4, 0 0 40px #03e9f4, 0 0 80px #03e9f4;
-   transition-delay: 1s;
- }
+.btn-neon:hover {
+    background-color: #00ffff;
+    color: #000000;
+    box-shadow: 0 0 10px #00ffff;
+}
