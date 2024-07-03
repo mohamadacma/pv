@@ -33,11 +33,7 @@ function initTypewriter() {
     const text = `Hello! I'm Mohamad!
 Welcome to the Neo-Junto cafe,
 where ideas brew and minds percolate.
-Grab a seat, a quill, and let's ignite
-the flames of curiosity and discourse.
-Make yourself at home in this haven
-of intellectual ferment and friendly debate.
-What groundbreaking thoughts shall we explore today?`;
+`;
 
     const typingElement = document.querySelector('.typewriter-text');
     let i = 0;
