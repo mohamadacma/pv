@@ -31,8 +31,7 @@ function initSmoothScrolling() {
 
 function initTypewriter() {
     const text = `Hello! I'm Mohamad!
-Welcome to the Neo-Junto cafe,
-where ideas brew and minds percolate.
+Welcome to the Neo-Junto cafe!
 `;
 
     const typingElement = document.querySelector('.typewriter-text');
