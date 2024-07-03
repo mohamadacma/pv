@@ -100,16 +100,23 @@ h2 {
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
-    background-color: rgba(0, 20, 0, 0.8);
+
+
 }
 
-.project-card:hover h3 {
-    text-shadow: 0 0 5px #0f0;
+.project-card h3 {
+    color: #ffd700;
+    margin-bottom: 15px;
 }
 
-.project-card:hover h4 {
-    text-shadow: 0 0 5px #0ff;
+.project-card h4 {
+    color: #00ffff;
+    margin-top: 15px;
+}
+
+.project-card ol {
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .tech-icons {
@@ -122,37 +129,39 @@ h2 {
 .tech-icons i {
     margin: 0 10px;
     transition: transform 0.3s ease;
-    color: #0f0;
 }
 
 .tech-icons i:hover {
     transform: scale(1.2);
-    text-shadow: 0 0 5px #0f0;
+}
+
+.project-actions {
+    margin-top: 20px;
 }
 
 .btn-neon {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    color: #0f0;
+    color: #03e9f4;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
     overflow: hidden;
     transition: 0.5s;
     letter-spacing: 2px;
-    border: 1px solid #0f0;
+    border: 1px solid #03e9f4;
     background: transparent;
     margin: 10px 5px;
 }
 
 .btn-neon:hover {
-    background: #0f0;
-    color: #000;
-    box-shadow: 0 0 5px #0f0,
-                0 0 25px #0f0,
-                0 0 50px #0f0,
-                0 0 100px #0f0;
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
 }
 #podcastList {
     height: 600px;
