@@ -179,4 +179,43 @@ h2 {
 .thing-item:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-}
+}.things-grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 20px;
+ }
+
+ .thing-item {
+     background-color: rgba(30, 30, 30, 0.7);
+     border-radius: 10px;
+     padding: 20px;
+     text-align: center;
+     text-decoration: none;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100px;
+ }
+
+ .glow-text {
+     color: #00ffff;
+     font-size: 1.2em;
+     text-transform: uppercase;
+     transition: all 0.3s ease;
+ }
+
+ .thing-item:hover .glow-text,
+ .thing-item.active .glow-text {
+     text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+     color: #ffffff;
+ }
+
+ .thing-item.active {
+     background-color: rgba(0, 255, 255, 0.1);
+ }
+
+ h2.glow-text {
+     color: #ffffff;
+     text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+     margin-bottom: 30px;
+ }
