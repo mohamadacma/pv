@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
+ const items = document.querySelectorAll('.item');
+    items.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            item.classList.add('blink');
+        });
+        item.addEventListener('mouseout', () => {
+            item.classList.remove('blink');
+        });
+         });
     initEssentials();
     lazyLoadImages();
     initIntersectionObserver();
@@ -46,7 +55,6 @@ function initTypewriter() {
 
     typeWriter();
 }
-
 $('#demoModal').on('show.bs.modal', function (e) {
     $("#demoVideo").attr('src', "https://www.youtube.com/embed/ZFs42j0D8qI");
 })
@@ -62,7 +70,6 @@ function lazyLoadImages() {
         img.onload = () => img.classList.add('loaded');
     });
 }
-
 function showGrid() {
     document.querySelector('.grid-container').style.display = 'grid';
     document.getElementById('podcastList').style.display = 'none';
