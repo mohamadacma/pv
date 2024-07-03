@@ -97,7 +97,9 @@ function loadPhotoGallery() {
         'images/image10.jpeg',
         'images/image12.jpeg',
         'images/image13.jpeg',
-        'images/image14.jpeg'
+        'images/image14.jpeg',
+        'images/image20.jpeg',
+        'images/images21.jpeg'
     ];
     const photoGallery = document.getElementById('photoGallery');
     photos.forEach(photo => {
