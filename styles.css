@@ -199,12 +199,69 @@ h2 {
     transition: all 0.3s ease;
     padding: 20px;
     text-align: center;
+}
 
+
+.btn-neon {
+    color: #03e9f4;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    border: 1px solid #03e9f4;
+    background: transparent;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.btn-neon:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
 
 .category-item:hover {
     transform: scale(1.1);
 }
 
+.eye:hover {
+    transform: translateY(-10px);
+}
+
+.mouth:hover, .chin:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.btn-neon {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    border: 1px solid #03e9f4;
+    background: transparent;
+    margin: 10px 0;
+}
+
+.btn-neon:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
 
 .glow-text {
     color: #fff;
@@ -217,91 +274,4 @@ h2 {
 
 #podcasts .btn-neon {
     margin: 10px;
-}
-.smiley-face-container {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    margin: 50px auto;
-    background-color: #121212;
-    border-radius: 50%;
-    border: 2px solid #03e9f4;
-}
-
-.eye {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background-color: #03e9f4;
-    border-radius: 50%;
-    top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.left-eye {
-    left: 80px;
-}
-
-.right-eye {
-    right: 80px;
-}
-
-.nose {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-color: #03e9f4;
-    border-radius: 50%;
-    top: 180px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mouth {
-    position: absolute;
-    width: 240px;
-    height: 120px;
-    border-radius: 0 0 120px 120px;
-    border: 10px solid #03e9f4;
-    border-top: none;
-    bottom: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn-neon {
-    font-size: 12px;
-    padding: 5px 10px;
-    margin: 5px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #03e9f4;
-    border: 1px solid #03e9f4;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    text-align: center;
-}
-
-.btn-neon:hover {
-    background-color: #03e9f4;
-    color: #121212;
-    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4;
-}
-
-.eye .btn-neon, .nose .btn-neon {
-    width: 90%;
-    font-size: 10px;
-}
-
-.mouth .btn-neon {
-    width: 80%;
 }
