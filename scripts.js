@@ -156,6 +156,21 @@ function initPodcastSphere() {
     window.addEventListener('mousemove', onMouseMove, false);
     window.addEventListener('resize', onWindowResize, false);
 }
+function showPodcastSphere() {
+    // Hide the grid container
+    document.querySelector('.grid-container').style.display = 'none';
+
+    // Show the podcast list container
+    document.getElementById('podcastList').style.display = 'block';
+
+    // Initialize the podcast sphere
+    initPodcastSphere();
+}
+function showGrid() {
+    document.querySelector('.grid-container').style.display = 'grid';
+    document.getElementById('podcastList').style.display = 'none';
+    document.getElementById('backToGrid').style.display = 'none';
+}
 
 function spherePosition(i, total) {
     const phi = Math.acos(-1 + (2 * i) / total);
