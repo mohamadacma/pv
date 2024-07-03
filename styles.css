@@ -124,59 +124,65 @@ h2 {
 .lazy.loaded {
     opacity: 1;
 }
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.hexagon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
-.grid-item {
+.hexagon {
+    width: 200px;
+    height: 230px;
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 2rem;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.grid-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+.hexagon:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-.grid-item h3 {
+.hexagon-content {
+    padding: 20px;
+}
+
+.hexagon h3 {
     color: #ffd700;
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
 }
 
-.grid-item .btn {
-    margin-top: 1rem;
-}
-
-#movies { background-image: url('path/to/movie-background.jpg'); }
-#tv { background-image: url('path/to/tv-background.jpg'); }
-#music { background-image: url('path/to/music-background.jpg'); }
-#podcasts { background-image: url('path/to/podcast-background.jpg'); }
-
-.grid-item {
-    background-size: cover;
-    background-position: center;
-    color: white;
+.btn-neon {
     position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
     overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    border: none;
+    background: transparent;
 }
 
-.grid-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+.btn-neon:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
 }
 
-.grid-item h3, .grid-item .btn {
-    position: relative;
-    z-index: 2;
+.glow-text {
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
 }
