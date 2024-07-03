@@ -2,12 +2,39 @@ document.addEventListener('DOMContentLoaded', function() {
     initEssentials();
     lazyLoadImages();
     initIntersectionObserver();
+    initHackerEffect();
 });
 
 function initEssentials() {
     initCinematicBackground();
     initSmoothScrolling();
     initTypewriter();
+}
+function initHackerEffect() {
+    const hackerTexts = document.querySelectorAll('.hacker-text');
+    hackerTexts.forEach(text => {
+        text.addEventListener('mouseover', () => {
+            const originalText = text.textContent;
+            let iteration = 0;
+
+            const interval = setInterval(() => {
+                text.textContent = originalText.split("")
+                    .map((letter, index) => {
+                        if (index < iteration) {
+                            return originalText[index];
+                        }
+                        return String.fromCharCode(65 + Math.floor(Math.random() * 26));
+                    })
+                    .join("");
+
+                if (iteration >= originalText.length) {
+                    clearInterval(interval);
+                }
+
+                iteration += 1 / 3;
+            }, 30);
+        });
+    });
 }
 
 function initCinematicBackground() {
