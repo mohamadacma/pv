@@ -176,6 +176,102 @@ h2 {
 #books {
     align-self: flex-end;
 }
+.face-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 50px auto;
+}
+
+.category-item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.eye {
+    width: 150px;
+    height: 150px;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    top: 50px;
+}
+
+.left-eye {
+    left: 100px;
+}
+
+.right-eye {
+    right: 100px;
+}
+
+.nose {
+    width: 180px;
+    height: 180px;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mouth {
+    width: 300px;
+    height: 100px;
+    border-radius: 0 0 150px 150px;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chin {
+    width: 200px;
+    height: 100px;
+    border-radius: 100px 100px 0 0;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-neon {
+    color: #03e9f4;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    border: 1px solid #03e9f4;
+    background: transparent;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.btn-neon:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+
+.category-item:hover {
+    transform: scale(1.1);
+}
+
+.eye:hover {
+    transform: translateY(-10px);
+}
+
+.mouth:hover, .chin:hover {
+    transform: translateX(-50%) scale(1.1);
+}
 
 .btn-neon {
     position: relative;
