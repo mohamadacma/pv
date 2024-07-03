@@ -1,4 +1,3 @@
-import { OrbitControls } from 'https://unpkg.com/three/examples/jsm/controls/OrbitControls.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     initEssentials();
