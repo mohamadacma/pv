@@ -4,18 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initIntersectionObserver();
 });
 
-function initEssentials() {
-    initCinematicBackground();
-    initSmoothScrolling();
-    initTypewriter();
-}
-
-function initCinematicBackground() {
-    const bg = document.getElementById('cinematic-bg');
-    setInterval(() => {
-        bg.style.background = `linear-gradient(${Math.random() * 360}deg, #000000, #1a1a1a)`;
-    }, 5000);
-}
 
 function initSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
