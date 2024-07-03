@@ -135,19 +135,57 @@ h2 {
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.thing-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent 30%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .thing-item:hover {
     transform: scale(1.05);
 }
 
+.thing-item:hover::before {
+    opacity: 1;
+    animation: rotate 4s linear infinite;
+}
+
 .thing-item h3 {
     color: #ffd700;
     margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
 }
 
 .thing-item p {
     color: #00ffff;
     font-size: 0.9em;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(1turn);
+    }
 }
