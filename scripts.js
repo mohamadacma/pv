@@ -29,7 +29,7 @@ function initSmoothScrolling() {
 }
 
 function initTypewriter() {
-    const text = `Hello! I'm Mohamad!\n and this is my cafe!`;
+    const text = `Hello! I'm M!\n and this is my cafe!`;
     const typingElement = document.querySelector('.typewriter-text');
     typingElement.textContent = '';
     let i = 0;
