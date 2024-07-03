@@ -32,6 +32,7 @@ function initSmoothScrolling() {
 function initTypewriter() {
     const text = `Hello! I'm Mohamad!\nWelcome to the Neo-Junto cafe!`;
     const typingElement = document.querySelector('.typewriter-text');
+    const cursorElement = document.querySelector('.cursor');
     typingElement.textContent = '';
     let i = 0;
 
@@ -41,6 +42,8 @@ function initTypewriter() {
             i++;
             setTimeout(typeWriter, 50);
         } else {
+            // Remove the cursor when typing is done
+            cursorElement.style.display = 'none';
             addInteractiveElements();
         }
     }
