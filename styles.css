@@ -101,6 +101,7 @@ h2 {
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .project-card h3 {
