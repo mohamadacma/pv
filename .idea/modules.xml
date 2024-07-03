@@ -7,7 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Web.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Web.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/personalVlog.iml" filepath="$PROJECT_DIR$/.idea/personalVlog.iml" />
-      <module fileurl="file://$PROJECT_DIR$/resources.iml" filepath="$PROJECT_DIR$/resources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/resources.main.iml" filepath="$PROJECT_DIR$/.idea/modules/resources.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/resources.test.iml" filepath="$PROJECT_DIR$/.idea/modules/resources.test.iml" />
     </modules>
   </component>
 </project>

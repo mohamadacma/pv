@@ -5,6 +5,9 @@
       <module name="PersonalVlogSerivceLambda" target="17" />
       <module name="PersonalVlogSerivceLambda.main" target="17" />
       <module name="PersonalVlogSerivceLambda.test" target="17" />
+      <module name="resources" target="17" />
+      <module name="resources.main" target="17" />
+      <module name="resources.test" target="17" />
       <module name="Web" target="17" />
       <module name="Web.main" target="17" />
       <module name="Web.test" target="17" />
