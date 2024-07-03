@@ -1,13 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
- const items = document.querySelectorAll('.item');
-    items.forEach(item => {
-        item.addEventListener('mouseover', () => {
-            item.classList.add('blink');
-        });
-        item.addEventListener('mouseout', () => {
-            item.classList.remove('blink');
-        });
-         });
     initEssentials();
     lazyLoadImages();
     initIntersectionObserver();
