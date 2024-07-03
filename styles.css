@@ -39,12 +39,9 @@ main {
 }
 
 .section {
-    margin-bottom: 3em;
+    background-color: #121212;
     padding: 2em;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease;
+    color: #ffffff;
 }
 
 .section:hover {
@@ -181,23 +178,14 @@ h2 {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }.category-container {
      display: flex;
-     flex-wrap: wrap;
-     justify-content: space-around;
-     padding: 20px;
+     flex-direction: column;
+     gap: 1.5em;
  }
 
  .category-item {
-     width: 45%;
-     min-width: 250px;
      background-color: rgba(255, 255, 255, 0.1);
-     border-radius: 15px;
-     margin: 20px;
-     padding: 20px;
-     transition: all 0.3s ease;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     text-align: center;
+     border-radius: 10px;
+     padding: 1em;
  }
 
  .category-item:hover {
@@ -206,34 +194,28 @@ h2 {
  }
 
  .category-item h3 {
-     color: #ffd700;
-     margin-bottom: 15px;
+     color: #ffffff;
+     margin-bottom: 0.5em;
+     font-size: 1.2em;
  }
 
- .btn-neon {
-     position: relative;
-     display: inline-block;
-     padding: 10px 20px;
-     color: #03e9f4;
-     font-size: 16px;
-     text-decoration: none;
-     text-transform: uppercase;
-     overflow: hidden;
-     transition: 0.5s;
-     letter-spacing: 2px;
-     border: 1px solid #03e9f4;
-     background: transparent;
-     margin: 10px 0;
- }
+.btn-neon {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0.3em;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
 
- .btn-neon:hover {
-     background: #03e9f4;
-     color: #050801;
-     box-shadow: 0 0 5px #03e9f4,
-                 0 0 25px #03e9f4,
-                 0 0 50px #03e9f4,
-                 0 0 100px #03e9f4;
- }
+.btn-neon:hover {
+    background-color: #00ffff;
+    color: #000000;
+    box-shadow: 0 0 10px #00ffff;
+}
 
  .glow-text {
      color: #fff;
@@ -257,8 +239,10 @@ h2 {
  }
 
  .neon-text {
-   color: #fff;
-   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de;
+     color: #ffffff;
+     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de;
+     font-size: 2.5em;
+     margin-bottom: 1em;
  }
 
  .project-card {
