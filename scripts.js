@@ -262,6 +262,16 @@ function onWindowResize() {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
+$('#demoModal').on('shown.bs.modal', function () {
+    var iframe = $(this).find('iframe');
+    var src = iframe.attr('data-src');
+    iframe.attr('src', src);
+});
+
+$('#demoModal').on('hide.bs.modal', function () {
+    var iframe = $(this).find('iframe');
+    iframe.attr('src', '');
+});
 
 function loadPhotoGallery() {
     const photos = [
