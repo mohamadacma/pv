@@ -278,6 +278,7 @@ h2 {
     letter-spacing: 2px;
     position: relative;
     z-index: 1;
+    color: inherit;
 }
 
 .glow-text {
