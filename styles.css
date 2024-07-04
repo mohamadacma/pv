@@ -398,5 +398,7 @@ h2 {
 
      .ascii-art {
          animation: steam 2s infinite;
+         font-family: monospace;
+         color: #00FF00;
      }
 
