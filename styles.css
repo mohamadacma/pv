@@ -344,7 +344,7 @@ h2 {
  .ascii-art {
      font-family: monospace;
      white-space: pre;
-     font-size: 8px;
+     font-size: 12px;
      line-height: 1;
      color: #00ff00;
      background-color: #000;
@@ -353,6 +353,7 @@ h2 {
      margin-bottom: 20px;
      overflow-x: auto;
      max-width: 100%;
+     text-align: center;
  }
 
  .writings-content {
@@ -383,3 +384,18 @@ h2 {
      from, to { border-color: transparent }
      50% { border-color: #00ff00; }
  }
+
+ @media (max-width: 600px) {
+     .ascii-art {
+         font-size: 8px;
+     }
+
+     @keyframes steam {
+         0% { opacity: 0; }
+         50% { opacity: 1; }
+         100% { opacity: 0; }
+     }
+
+     .ascii-art {
+         animation: steam 2s infinite;
+     }
