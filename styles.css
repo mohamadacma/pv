@@ -327,3 +327,34 @@ h2 {
  #podcasts .btn-neon {
      margin: 10px;
  }
+
+ #writings {
+     font-family: 'Courier New', monospace;
+ }
+
+ .writings-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: 20px;
+     background-color: rgba(0, 20, 0, 0.3);
+     border-radius: 10px;
+ }
+
+ .ascii-art {
+     color: #0f0;
+     font-size: 14px;
+     line-height: 1;
+     margin-bottom: 20px;
+ }
+
+ .blink-cursor::after {
+     content: '_';
+     animation: blink 1s step-end infinite;
+ }
+
+ @keyframes blink {
+     0%, 100% { opacity: 1; }
+     50% { opacity: 0; }
+ }

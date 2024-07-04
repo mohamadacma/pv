@@ -3,12 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
     lazyLoadImages();
     initIntersectionObserver();
     initHackerEffect();
+    initWritingsSection();
 });
 
 function initEssentials() {
     initCinematicBackground();
     initSmoothScrolling();
     initTypewriter();
+}
+function initWritingsSection() {
+    const writingsContainer = document.querySelector('.writings-container');
+    writingsContainer.addEventListener('click', () => {
+        alert('No articles available yet. Check back soon!');
+    });
 }
 function initHackerEffect() {
     const hackerTexts = document.querySelectorAll('.hacker-text');
