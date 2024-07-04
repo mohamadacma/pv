@@ -19,6 +19,7 @@ function initWritingsSection() {
 }
 function initHackerEffect() {
     const hackerTexts = document.querySelectorAll('.hacker-text');
+    const beepSound = document.getElementById('beep-sound');
     hackerTexts.forEach(text => {
         text.addEventListener('mouseover', () => {
             const originalText = text.textContent;
@@ -40,6 +41,10 @@ function initHackerEffect() {
 
                 iteration += 1 / 3;
             }, 30);
+
+            // play audio
+            beepSound.currentTime = 0;
+            beepSound.play();
         });
     });
 }
