@@ -252,8 +252,8 @@ h2 {
 }
 
 .category-item:not(.project-card):hover {
-    background-color: #0f0;
-    color: #000;
+    background-color: rgba(15, 255, 15, 0.2);
+    color: #0f0;
     box-shadow: 0 0 15px #0f0;
 }
 
