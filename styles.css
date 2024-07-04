@@ -399,3 +399,34 @@ h2 {
      .ascii-art {
          animation: steam 2s infinite;
      }
+
+     .future-writings {
+         margin-top: 30px;
+         padding: 20px;
+         background-color: rgba(0, 30, 0, 0.3);
+         border-radius: 5px;
+     }
+
+     .interest-list {
+         color: #00ff00;
+         list-style-type: none;
+         padding-left: 20px;
+     }
+
+     .interest-list > li {
+         margin-bottom: 15px;
+     }
+
+     .interest-list ul {
+         list-style-type: none;
+         padding-left: 20px;
+         color: #ffffff;
+     }
+
+     .interest-list ul li::before {
+         content: ">";
+         color: #00ff00;
+         display: inline-block;
+         width: 1em;
+         margin-left: -1em;
+     }
