@@ -43,7 +43,7 @@ function initHackerEffect() {
             }, 30);
 
             // play audio
-            beepSound.currentTime = 0;
+            beepSound.currentTime = 1;
             beepSound.play();
         });
     });
