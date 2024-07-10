@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/personalVlog.iml" filepath="$PROJECT_DIR$/.idea/personalVlog.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/resources.main.iml" filepath="$PROJECT_DIR$/.idea/modules/resources.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/resources.test.iml" filepath="$PROJECT_DIR$/.idea/modules/resources.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web.iml" filepath="$PROJECT_DIR$/web.iml" />
     </modules>
   </component>
 </project>
