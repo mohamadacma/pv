@@ -1,3 +1,5 @@
+const PLACEHOLDER_IMAGE = 'images/placeholder.png';
+
 export function loadPhotoGallery() {
     const photos = [
         'images/image6.jpeg',
@@ -23,11 +25,13 @@ export function loadPhotoGallery() {
             photoDiv.className = 'col-md-4 col-sm-6 mb-3';
             photoDiv.innerHTML = `
                 <div class="card">
-                    <img src="${photo}" class="card-img-top" alt="Photography">
+                    <img class="card-img-top lazy" src="${PLACEHOLDER_IMAGE}" data-src="${photo}" alt="Photography">
                 </div>
             `;
             photoGallery.appendChild(photoDiv);
-        };
+        });
+         lazyLoadImages();
+         }
         img.onerror = function() {
             console.error(`Failed to load image: ${photo}`);
         };
@@ -37,11 +41,25 @@ export function loadPhotoGallery() {
 
 export function lazyLoadImages() {
     const images = document.querySelectorAll('img.lazy');
-    images.forEach(img => {
-        img.src = img.dataset.src;
-        img.onload = () => img.classList.add('loaded');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.onload = () => {
+                img.classList.add('loaded');
+                img.classList.remove('lazy');
+            };
+            img.onerror = () => {
+                console.error(`Failed to load image: ${img.dataset.src}`);
+            };
+            observer.unobserve(img);
+            }
     });
-}
+});
+    const lazyImages = document.querySelectorAll('img.lazy');
+    lazyImages.forEach(img => imageObserver.observe(img));
+    }
 
 export function initIntersectionObserver() {
     const options = {
