@@ -6,6 +6,30 @@
     src: url('https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxK.woff2') format('woff2');
 }
 
+.skip-link {
+    position: absolute !important;
+    left: -9999px !important;
+    top: auto !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    z-index: 9999 !important;
+}
+
+.skip-link:focus {
+    left: 0 !important;
+    top: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: auto !important;
+    padding: 10px !important;
+    background-color: #000 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    border: 2px solid #fff !important;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de !important;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -401,27 +425,5 @@ h2 {
          font-family: monospace;
          color: #00FF00;
      }
-     .skip-link {
-         position: absolute !important;
-         left: -9999px !important;
-         top: auto !important;
-         width: 1px !important;
-         height: 1px !important;
-         overflow: hidden !important;
-         z-index: 9999 !important;
-     }
 
-     .skip-link:focus {
-         left: 0 !important;
-         top: 0 !important;
-         width: auto !important;
-         height: auto !important;
-         overflow: auto !important;
-         padding: 10px !important;
-         background-color: #000 !important;
-         color: #fff !important;
-         text-decoration: none !important;
-         border: 2px solid #fff !important;
-         box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de !important;
-     }
 
