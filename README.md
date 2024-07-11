@@ -10,7 +10,7 @@ N/A
     - `media/`: Contains audio files used in the project.
     - `index.html`: The main HTML file for the website.
 - `images/`: Contains all image assets used throughout the site.
-- `PersonalVlogServiceLambda/`: Contains AWS Lambda function code (if applicable).
+- `PersonalVlogServiceLambda/`: Contains AWS Lambda function code.
 
 ## JavaScript Modules
 
