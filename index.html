@@ -29,20 +29,22 @@
     <noscript><link rel="stylesheet" href="src/css/styles.css"></noscript>
 </head>
 <body>
-<header class="text-white text-center py-4">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="text-white text-center py-4">
     <h1 class="animate-title">Neo-Junto cafe</h1>
-</header>
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-        <ul class="navbar-nav mx-auto">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="#things-i-like">Things I like</a></li>
-            <li class="nav-item"><a class="nav-link" href="#flaneuring">Flaneuring</a></li>
-        </ul>
-    </div>
-</nav>
-<main class="container">
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Main Navigation">
+        <div class="container">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#things-i-like">Things I like</a></li>
+                <li class="nav-item"><a class="nav-link" href="#flaneuring">Flaneuring</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<main id="main-content" class="container">
     <section id="about" class="section">
         <div id="welcome-message" class="typewriter-container">
             <span class="typewriter-text"></span>
@@ -145,6 +147,7 @@
         <div id="photoGallery" class="row"></div>
     </section>
 </main>
+
 <footer class="text-center py-3">
     <p>Contact: mohamadacma@gmail.com</p>
 </footer>
@@ -153,7 +156,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="demoModalLabel">TeamSynchronizer Demo</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close modal">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
