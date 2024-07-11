@@ -7,27 +7,27 @@
 }
 
 .skip-link {
-    position: absolute !important;
-    left: -9999px !important;
-    top: auto !important;
-    width: 1px !important;
-    height: 1px !important;
-    overflow: hidden !important;
-    z-index: 9999 !important;
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 9999;
 }
 
 .skip-link:focus {
-    left: 0 !important;
-    top: 0 !important;
-    width: auto !important;
-    height: auto !important;
-    overflow: auto !important;
-    padding: 10px !important;
-    background-color: #000 !important;
-    color: #fff !important;
-    text-decoration: none !important;
-    border: 2px solid #fff !important;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de !important;
+    left: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: #000;
+    color: #0f0;
+    text-decoration: none;
+    border: 2px solid #0f0;
+    box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+    outline: none;
 }
 
 body, html {
