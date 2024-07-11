@@ -18,6 +18,8 @@ export function loadPhotoGallery() {
         'images/image1000.jpeg'
     ];
     const photoGallery = document.getElementById('photoGallery');
+    let loadedCount = 0;
+
     photos.forEach(photo => {
         const img = new Image();
         img.onload = function() {
@@ -29,37 +31,44 @@ export function loadPhotoGallery() {
                 </div>
             `;
             photoGallery.appendChild(photoDiv);
-        });
-         lazyLoadImages();
-         }
+
+            loadedCount++;
+            if (loadedCount === photos.length) {
+                lazyLoadImages();
+            }
+        };
         img.onerror = function() {
             console.error(`Failed to load image: ${photo}`);
+            loadedCount++;
+            if (loadedCount === photos.length) {
+                lazyLoadImages();
+            }
         };
         img.src = photo;
     });
 }
 
 export function lazyLoadImages() {
-    const images = document.querySelectorAll('img.lazy');
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.onload = () => {
-                img.classList.add('loaded');
-                img.classList.remove('lazy');
-            };
-            img.onerror = () => {
-                console.error(`Failed to load image: ${img.dataset.src}`);
-            };
-            observer.unobserve(img);
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.onload = () => {
+                    img.classList.add('loaded');
+                    img.classList.remove('lazy');
+                };
+                img.onerror = () => {
+                    console.error(`Failed to load image: ${img.dataset.src}`);
+                };
+                observer.unobserve(img);
             }
+        });
     });
-});
+
     const lazyImages = document.querySelectorAll('img.lazy');
     lazyImages.forEach(img => imageObserver.observe(img));
-    }
+}
 
 export function initIntersectionObserver() {
     const options = {
@@ -81,4 +90,3 @@ export function initIntersectionObserver() {
 
     observer.observe(document.querySelector('#photoGallery'));
 }
-
