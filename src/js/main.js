@@ -61,10 +61,21 @@ function initHorrorTypewriter() {
         }, 50);
     }
 
+    function playTypeSound() {
+
+        console.log('Type sound');
+    }
+
+    function playEraseSound() {
+
+        console.log('Erase sound');
+    }
+
+    typeNextInterest();
+}
 
 document.addEventListener('DOMContentLoaded', function() {
-    initTypewriter();
-    initHorrorTypewriter();
+    initEssentials();
     loadPhotoGallery();
     initHackerEffect();
     initModalHandler();
