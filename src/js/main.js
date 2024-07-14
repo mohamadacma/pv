@@ -12,7 +12,7 @@ function initEssentials() {
 }
 
 function initHorrorTypewriter() {
-    const container = document.querySelector('.horror-typewriter-text');
+    const container = document.querySelector('.horror-typewriter-container');
     const interests = [
         "Technology",
         "Philosophy",
@@ -24,12 +24,14 @@ function initHorrorTypewriter() {
 
     function typeNextInterest() {
         if (currentIndex < interests.length) {
-            typeHorrorStyle(interests[currentIndex], container, () => {
+            const interestElement = document.createElement('div');
+            interestElement.classList.add('horror-typewriter-text');
+            container.appendChild(interestElement);
+
+            typeHorrorStyle(interests[currentIndex], interestElement, () => {
                 setTimeout(() => {
-                    eraseText(container, () => {
-                        currentIndex++;
-                        typeNextInterest();
-                    });
+                    currentIndex++;
+                    typeNextInterest();
                 }, 1000);
             });
         }
@@ -46,29 +48,13 @@ function initHorrorTypewriter() {
                 clearInterval(interval);
                 if (callback) callback();
             }
-        }, 100);
-    }
-
-    function eraseText(element, callback) {
-        const interval = setInterval(() => {
-            if (element.textContent.length > 0) {
-                element.textContent = element.textContent.slice(0, -1);
-                playEraseSound();
-            } else {
-                clearInterval(interval);
-                if (callback) callback();
-            }
-        }, 50);
+        }, 150);
     }
 
     function playTypeSound() {
 
-        console.log('Type sound');
-    }
-
-    function playEraseSound() {
-
-        console.log('Erase sound');
+        const audio = new Audio('media/scary-type-sound.mp3');
+        audio.play();
     }
 
     typeNextInterest();

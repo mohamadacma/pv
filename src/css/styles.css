@@ -29,22 +29,30 @@
     box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
     outline: none;
 }
-.horror-typewriter-container {
-    font-family: 'Courier New', monospace;
-    font-size: 24px;
-    color: #ff0000;
-    text-shadow: 0 0 10px #ff0000;
-    margin-top: 20px;
-}
+..horror-typewriter-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     background-color: black;
+ }
 
-.horror-typewriter-text {
-    border-right: 0.15em solid #ff0000;
-    white-space: nowrap;
-    overflow: hidden;
-    margin: 0 auto;
-    letter-spacing: 0.15em;
-    animation: blink-caret 0.75s step-end infinite;
-}
+ .horror-typewriter-text {
+     font-family: 'Arial', sans-serif;
+     font-size: 48px;
+     font-weight: bold;
+     color: #ff0000;
+     text-shadow: 0 0 10px #ff0000;
+     margin: 20px 0;
+     opacity: 0;
+     animation: fadeIn 0.5s forwards;
+ }
+
+ @keyframes fadeIn {
+     from { opacity: 0; }
+     to { opacity: 1; }
+ }
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
