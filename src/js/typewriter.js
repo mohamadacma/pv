@@ -6,17 +6,17 @@ export function initTypewriter() {
 
    function typeWriter() {
            if (i < text.length) {
-               if (text.charAt(i) === '\n') {
-                   typingElement.innerHTML += '<br>';
-               } else {
-                   typingElement.textContent += text.charAt(i);
-               }
+               typingElement.textContent += text.charAt(i);
                i++;
-               setTimeout(typeWriter, 100);
+               setTimeout(typeWriter, 50);
+           } else {
+               // Start the interests animation when typing is done
+               initHorrorTypewriter();
            }
        }
 
-    typeWriter();
+       typeWriter();
+   }
 }
 
 function initWritingsSection() {

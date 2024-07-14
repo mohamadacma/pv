@@ -12,47 +12,46 @@ function initEssentials() {
 }
 
 function initHorrorTypewriter() {
-    const container = document.querySelector('.horror-typewriter-container');
+    const container = document.querySelector('.horror-typewriter-text');
     const interests = [
-        "Bio-Technology",
-        "Longevity",
-        "Philosophy",
-        "Music Theory",
-        "Movies",
-        "Music",
-        "American History"
+        "BIO-TECHNOLOGY",
+        "LONGEVITY",
+        "PHILOSOPHY",
+        "MUSIC THEORY",
+        "MOVIES",
+        "AMERICAN HISTORY"
+        "PHOTOGRAPHY"
     ];
     let currentIndex = 0;
 
-    function typeNextInterest() {
+function showNextInterest() {
         if (currentIndex < interests.length) {
-            const interestElement = document.createElement('div');
-            interestElement.classList.add('horror-typewriter-text');
-            container.appendChild(interestElement);
+            container.textContent = interests[currentIndex];
+            container.style.opacity = '0';
+            container.style.transform = 'scale(0.5)';
 
-            typeHorrorStyle(interests[currentIndex], interestElement, () => {
+            setTimeout(() => {
+                container.style.transition = 'opacity 0.5s, transform 0.5s';
+                container.style.opacity = '1';
+                container.style.transform = 'scale(1)';
+                playTypeSound();
+
                 setTimeout(() => {
-                    currentIndex++;
-                    typeNextInterest();
-                }, 1000);
-            });
+                    container.style.opacity = '0';
+                    container.style.transform = 'scale(0.5)';
+                    setTimeout(() => {
+                        currentIndex++;
+                        showNextInterest();
+                    }, 500);
+                }, 1500);
+            }, 100);
+        } else {
+            // Restart the sequence
+            currentIndex = 0;
+            showNextInterest();
         }
     }
 
-     function typeHorrorStyle(text, element, callback) {
-            element.textContent = text;
-            element.style.opacity = '0';
-            element.style.transform = 'scale(0.5)';
-
-            setTimeout(() => {
-                element.style.transition = 'opacity 0.5s, transform 0.5s';
-                element.style.opacity = '1';
-                element.style.transform = 'scale(1)';
-                playTypeSound();
-
-                setTimeout(callback, 500);
-            }, 100);
-        }
 
     function playTypeSound() {
 
@@ -60,7 +59,7 @@ function initHorrorTypewriter() {
         audio.play();
     }
 
-    typeNextInterest();
+    showNextInterest();
 }
 
 document.addEventListener('DOMContentLoaded', function() {

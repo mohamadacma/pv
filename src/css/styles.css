@@ -91,6 +91,84 @@
     word-spacing: 4px;
 }
 
+.horror-typewriter-container {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.horror-typewriter-text {
+    font-family: 'Impact', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+    50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
+    100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+}
+
+.horror-typewriter-text {
+    animation: textGlow 2s infinite;
+}
+.tarantino-typewriter-container {
+    background-color: #000;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.tarantino-typewriter-text {
+    font-family: 'Impact', 'Arial Narrow Bold', sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #FDE047;
+    background-color: #000;
+    padding: 10px;
+    display: inline-block;
+    transform: rotate(-2deg);
+    box-shadow: 3px 3px 0 rgba(253, 224, 71, 0.3);
+    line-height: 1.2;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+
+.horror-typewriter-container {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.horror-typewriter-text {
+    font-family: 'Impact', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+    50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
+    100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+}
+
+.horror-typewriter-text {
+    animation: textGlow 2s infinite;
+}
+
 body, html {
     margin: 0;
     padding: 0;
