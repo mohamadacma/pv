@@ -29,25 +29,36 @@
     box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
     outline: none;
 }
-..horror-typewriter-container {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     height: 100vh;
-     background-color: black;
- }
+.horror-typewriter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 20px;
+    background-color: black;
+}
 
- .horror-typewriter-text {
-     font-family: 'Arial', sans-serif;
-     font-size: 48px;
-     font-weight: bold;
-     color: #ff0000;
-     text-shadow: 0 0 10px #ff0000;
-     margin: 20px 0;
-     opacity: 0;
-     animation: fadeIn 0.5s forwards;
- }
+.horror-typewriter-text {
+    font-family: 'Impact', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    margin: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+    50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
+    100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+}
+
+.horror-typewriter-text {
+    animation: textGlow 2s infinite;
+}
 
  @keyframes fadeIn {
      from { opacity: 0; }

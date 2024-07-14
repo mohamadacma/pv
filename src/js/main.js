@@ -14,11 +14,13 @@ function initEssentials() {
 function initHorrorTypewriter() {
     const container = document.querySelector('.horror-typewriter-container');
     const interests = [
-        "Technology",
+        "Bio-Technology",
+        "Longevity",
         "Philosophy",
-        "Science",
-        "Art",
-        "Music"
+        "Music Theory",
+        "Movies",
+        "Music",
+        "American History"
     ];
     let currentIndex = 0;
 
@@ -37,19 +39,20 @@ function initHorrorTypewriter() {
         }
     }
 
-    function typeHorrorStyle(text, element, callback) {
-        let index = 0;
-        const interval = setInterval(() => {
-            if (index < text.length) {
-                element.textContent += text[index];
+     function typeHorrorStyle(text, element, callback) {
+            element.textContent = text;
+            element.style.opacity = '0';
+            element.style.transform = 'scale(0.5)';
+
+            setTimeout(() => {
+                element.style.transition = 'opacity 0.5s, transform 0.5s';
+                element.style.opacity = '1';
+                element.style.transform = 'scale(1)';
                 playTypeSound();
-                index++;
-            } else {
-                clearInterval(interval);
-                if (callback) callback();
-            }
-        }, 150);
-    }
+
+                setTimeout(callback, 500);
+            }, 100);
+        }
 
     function playTypeSound() {
 
