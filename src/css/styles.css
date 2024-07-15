@@ -168,6 +168,31 @@
 .horror-typewriter-text {
     animation: textGlow 2s infinite;
 }
+.coffee-menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2c2c2c;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu-item {
+    background-color: #4a3a2a;
+    color: #e0d0b0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Chalk', cursive;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.menu-item:hover {
+    background-color: #5a4a3a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
 
 body, html {
     margin: 0;
