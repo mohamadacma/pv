@@ -16,10 +16,13 @@ function initHorrorTypewriter() {
     const interests = [
         "BIO-TECHNOLOGY",
         "LONGEVITY",
-        "PHILOSOPHY",
+        "ENGINEERING"
+        "ASI",
         "MUSIC THEORY",
-        "MOVIES",
-        "AMERICAN HISTORY",
+        "OBSCURE Film",
+        "HISTORY",
+        "GREAT BOOKS",
+        "FOOD",
         "PHOTOGRAPHY"
     ];
     let currentIndex = 0;
