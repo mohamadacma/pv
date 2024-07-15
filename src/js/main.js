@@ -17,7 +17,6 @@ function initHorrorTypewriter() {
         "BIO-TECHNOLOGY",
         "LONGEVITY",
         "ENGINEERING",
-        "ASI",
         "MUSIC THEORY",
         "OBSCURE Film",
         "HISTORY",
