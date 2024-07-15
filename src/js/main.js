@@ -64,9 +64,25 @@ function showNextInterest() {
     showNextInterest();
 }
 
+function initMenuItems() {
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = item.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
     initEssentials();
     loadPhotoGallery();
     initHackerEffect();
     initModalHandler();
+    initMenuItems();
 });
