@@ -18,7 +18,7 @@ function initHorrorTypewriter() {
         "LONGEVITY",
         "ENGINEERING",
         "MUSIC THEORY",
-        "OBSCURE Film",
+        "OBSCURE FILM",
         "HISTORY",
         "GREAT BOOKS",
         "FOOD",
