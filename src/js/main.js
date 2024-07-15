@@ -66,7 +66,8 @@ function showNextInterest() {
 
 function initMenuItems() {
     const menuItems = document.querySelectorAll('.menu-item');
-    menuItems.forEach(item => {
+    menuItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.2}s`;
         item.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = item.getAttribute('href').substring(1);
