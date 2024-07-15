@@ -16,7 +16,7 @@ function initHorrorTypewriter() {
     const interests = [
         "BIO-TECHNOLOGY",
         "LONGEVITY",
-        "ENGINEERING"
+        "ENGINEERING",
         "ASI",
         "MUSIC THEORY",
         "OBSCURE Film",
