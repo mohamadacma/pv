@@ -19,7 +19,7 @@ function initHorrorTypewriter() {
         "PHILOSOPHY",
         "MUSIC THEORY",
         "MOVIES",
-        "AMERICAN HISTORY"
+        "AMERICAN HISTORY",
         "PHOTOGRAPHY"
     ];
     let currentIndex = 0;
