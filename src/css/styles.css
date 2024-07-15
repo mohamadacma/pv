@@ -198,6 +198,21 @@
     border-color: rgba(0, 255, 0, 0.5);
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
 }
+.menu-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 255, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-item:hover::after {
+    opacity: 1;
+}
 
 body, html {
     margin: 0;
