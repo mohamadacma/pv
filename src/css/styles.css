@@ -43,6 +43,11 @@
     letter-spacing: 2px;
     word-spacing: 4px;
 }
+.horror-typewriter-container {
+    background-color: #000;
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
 @keyframes textGlow {
     0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
