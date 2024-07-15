@@ -17,7 +17,7 @@ export function initTypewriter() {
 
        typeWriter();
    }
-}
+
 
 function initWritingsSection() {
     const writingsContainer = document.querySelector('.writings-container');
