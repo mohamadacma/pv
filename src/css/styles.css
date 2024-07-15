@@ -44,17 +44,6 @@
     word-spacing: 4px;
 }
 
-.horror-typewriter-text {
-    font-family: 'Impact', sans-serif;
-    font-size: 48px;
-    font-weight: bold;
-    color: #ff0000;
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
-    margin: 10px 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
 @keyframes textGlow {
     0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
     50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
