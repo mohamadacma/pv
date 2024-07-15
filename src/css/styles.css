@@ -169,6 +169,11 @@
     top: 0;
     z-index: 1000;
 }
+.coffee-cup {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
 
 .menu-item {
     color: #e0d0b0;
@@ -538,20 +543,13 @@ h2 {
      margin: 0 auto;
  }
 
- .ascii-art {
-     font-family: monospace;
-     white-space: pre;
-     font-size: 12px;
-     line-height: 1;
-     color: #00ff00;
-     background-color: #000;
-     padding: 20px;
-     border-radius: 5px;
-     margin-bottom: 20px;
-     overflow-x: auto;
-     max-width: 100%;
-     text-align: center;
- }
+.ascii-art {
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+}
 
  .writings-content {
      text-align: center;
