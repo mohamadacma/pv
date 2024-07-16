@@ -9,6 +9,7 @@ function initEssentials() {
     initSmoothScrolling();
     initTypewriter();
     initHorrorTypewriter();
+    initMenuItems();
 }
 
 function initHorrorTypewriter() {
@@ -26,7 +27,7 @@ function initHorrorTypewriter() {
     ];
     let currentIndex = 0;
 
-function showNextInterest() {
+    function showNextInterest() {
         if (currentIndex < interests.length) {
             container.textContent = interests[currentIndex];
             container.style.opacity = '0';
@@ -84,5 +85,5 @@ document.addEventListener('DOMContentLoaded', function() {
     loadPhotoGallery();
     initHackerEffect();
     initModalHandler();
-    initMenuItems();
+
 });
