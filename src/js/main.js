@@ -32,6 +32,7 @@ function initHorrorTypewriter() {
         "FOOLED BY RANDOMNESS",
         "THE CHEMICAL BROTHERS",
         "IBN BATTUTA",
+        "BOYZ NOISE",
         "RAHSAAN ROLAND KIRK",
         "HERMETO PASCOAL",
         "BENJAMIN FRANKLIN",
