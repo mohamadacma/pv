@@ -16,7 +16,7 @@ function initHorrorTypewriter() {
     const container = document.querySelector('.horror-typewriter-text');
     const interests = [
         "CRISPR",
-        "BRIDDE RNA",
+        "BRIDGE RNA",
         "BLUEPRINT",
         "BORGES",
         "SWITCHED ON POP",
