@@ -21,6 +21,7 @@ function initHorrorTypewriter() {
         "SWITCHED ON POP",
         "STARSHIP",
         "ENTER THE VOID",
+        "DAFT PUNK",
         "DAYS OF HEAVEN",
         "TIKA MASALA",
         "LAURIE ANDERSON",
