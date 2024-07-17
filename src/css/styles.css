@@ -29,11 +29,12 @@
     box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
     outline: none;
 }
+
 .horror-typewriter-text {
     font-family: 'Impact', 'Arial Black', sans-serif;
     font-size: 36px;
     text-transform: uppercase;
-    color: #FF3030;
+    color: #f6b26b;
     background-color: #000;
     padding: 15px;
     display: inline-block;
@@ -45,11 +46,25 @@
     border-radius: 4px;
     animation: fadeIn 1s ease-in-out, textGlow 2s infinite;
 }
+.horror-typewriter-text {
+    animation: textGlow 2s infinite;
+}
 
 @keyframes textGlow {
     0% { text-shadow: 0 0 10px #FF3030, 0 0 20px #FF3030; }
     50% { text-shadow: 0 0 20px #FF3030, 0 0 30px #FF3030, 0 0 40px #FF3030; }
     100% { text-shadow: 0 0 10px #FF3030, 0 0 20px #FF3030; }
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+    50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
+    100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+}
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+    50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
+    100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
 }
 
  @keyframes fadeIn {
@@ -70,7 +85,7 @@
 
 .tarantino-typewriter-text {
     font-family: 'Impact', 'Arial Narrow Bold', sans-serif;
-    font-size: 36px;
+    font-size: 32px;
     text-transform: uppercase;
     color: #FDE047;
     background-color: #000;
@@ -91,26 +106,6 @@
     margin: 20px 0;
 }
 
-.horror-typewriter-text {
-    font-family: 'Impact', sans-serif;
-    font-size: 48px;
-    font-weight: bold;
-    color: #ff0000;
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-}
-
-@keyframes textGlow {
-    0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
-    50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
-    100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
-}
-
-.horror-typewriter-text {
-    animation: textGlow 2s infinite;
-}
 .tarantino-typewriter-container {
     background-color: #000;
     padding: 20px;
@@ -140,26 +135,6 @@
     margin: 20px 0;
 }
 
-.horror-typewriter-text {
-    font-family: 'Impact', sans-serif;
-    font-size: 48px;
-    font-weight: bold;
-    color: #ff0000;
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-}
-
-@keyframes textGlow {
-    0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
-    50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
-    100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
-}
-
-.horror-typewriter-text {
-    animation: textGlow 2s infinite;
-}
 .coffee-menu {
     display: flex;
     justify-content: space-around;
