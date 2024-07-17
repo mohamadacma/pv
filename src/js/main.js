@@ -23,13 +23,24 @@ function initHorrorTypewriter() {
         "ENTER THE VOID",
         "DAFT PUNK",
         "DAYS OF HEAVEN",
+        "THE WARMTH OF OTHER SUNS",
+        "GORBASHEV",
         "TIKA MASALA",
         "LAURIE ANDERSON",
         "FEVER RAY",
         "M.I.A",
+        "FOOLED BY RANDOMNESS",
         "THE CHEMICAL BROTHERS",
+        "IBN BATTUTA",
         "RAHSAAN ROLAND KIRK",
-        "HERMETO PASCOAL"
+        "HERMETO PASCOAL",
+        "BENJAMIN FRANKLIN",
+        "THEODORE ROOSEVELT",
+        "ALEXANDER HAMILTON",
+        "THE FEDERALIST PAPERS",
+        "BAD SCIENCE",
+        "ANTIFRAGILE",
+        "DEATH"
     ];
     let currentIndex = 0;
 
