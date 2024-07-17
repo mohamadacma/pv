@@ -15,15 +15,20 @@ function initEssentials() {
 function initHorrorTypewriter() {
     const container = document.querySelector('.horror-typewriter-text');
     const interests = [
-        "BIO-TECHNOLOGY",
-        "LONGEVITY",
-        "ENGINEERING",
-        "MUSIC THEORY",
-        "OBSCURE FILM",
-        "HISTORY",
-        "GREAT BOOKS",
-        "FOOD",
-        "PHOTOGRAPHY"
+        "CRISPR",
+        "BLUEPRINT",
+        "BORGES",
+        "SWITCHED ON POP",
+        "STARSHIP",
+        "ENTER THE VOID",
+        "DAYS OF HEAVEN",
+        "TIKA MASALA",
+        "LAURIE ANDERSON",
+        "FEVER RAY",
+        "M.I.A",
+        "THE CHEMICAL BROTHERS",
+        "RAHSAAN ROLAND KIRK",
+        "HERMETO PASCOAL"
     ];
     let currentIndex = 0;
 
