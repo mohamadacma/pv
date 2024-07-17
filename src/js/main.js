@@ -24,7 +24,7 @@ function initHorrorTypewriter() {
         "ENTER THE VOID",
         "DAFT PUNK",
         "DAYS OF HEAVEN",
-        "THE WARMTH OF OTHER SUNS",
+        "ELECTRIC SHEEP",
         "GORBASHEV",
         "TIKA MASALA",
         "LAURIE ANDERSON",
