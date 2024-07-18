@@ -31,7 +31,7 @@ function initHorrorTypewriter() {
         "FEVER RAY",
         "M.I.A",
         "FOOLED BY RANDOMNESS",
-        "THE CHEMICAL BROTHERS",
+        "CHEMICAL BROTHERS",
         "IBN BATTUTA",
         "BOYZ NOISE",
         "RAHSAAN ROLAND KIRK",
@@ -39,7 +39,7 @@ function initHorrorTypewriter() {
         "BENJAMIN FRANKLIN",
         "THEODORE ROOSEVELT",
         "ALEXANDER HAMILTON",
-        "THE FEDERALIST PAPERS",
+        "FEDERALIST PAPERS",
         "BAD SCIENCE",
         "ANTIFRAGILE",
         "DONT DIE"
