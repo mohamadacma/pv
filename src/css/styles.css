@@ -144,6 +144,9 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     border: 1px solid transparent;
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
 }
 
 .menu-item:hover {
@@ -592,10 +595,11 @@ h2 {
      50% { border-color: #00ff00; }
  }
 
- @media (max-width: 600px) {
-     .ascii-art {
-         font-size: 8px;
-     }
+ @media (max-width: 768px) {
+   .coffee-menu {
+     flex-direction: column;
+     align-items: center;
+   }
 
      @keyframes steam {
          0% { opacity: 0; }
