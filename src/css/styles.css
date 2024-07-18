@@ -1,4 +1,6 @@
 @font-face {
+    font-family: 'Pulp Fiction';
+    src: url('path-to-pulp-fiction-font.woff2') format('woff2');
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -73,18 +75,29 @@
 }
 
 .tarantino-typewriter-text {
-    font-family: 'Impact', 'Arial Narrow Bold', sans-serif;
-    font-size: 32px;
-    text-transform: uppercase;
-    color: #FDE047;
-    background-color: #000;
-    padding: 10px;
-    display: inline-block;
-    transform: rotate(-2deg);
-    box-shadow: 3px 3px 0 rgba(253, 224, 71, 0.3);
-    line-height: 1.2;
-    letter-spacing: 2px;
-    word-spacing: 4px;
+  font-family: 'Pulp Fiction', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 48px;
+  color: #FFD700;
+  text-shadow: 3px 3px 0 #FF4500, -3px -3px 0 #FF4500, 3px -3px 0 #FF4500, -3px 3px 0 #FF4500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  transform: skew(-5deg);
+  padding: 20px;
+  background-color: #000;
+  border: 4px solid #FFD700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+.typewriter-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('path-to-grunge-texture.png');
+  opacity: 0.1;
+  z-index: 1;
 }
 
 .horror-typewriter-container {
@@ -276,6 +289,8 @@ h2 {
 }
 
 .typewriter-text {
+    position: relative;
+    z-index: 2;
     overflow: hidden;
     border-right: .15em solid #ffd700;
     white-space: nowrap;
