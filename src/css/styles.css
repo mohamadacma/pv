@@ -629,3 +629,65 @@ h2 {
      }
 
 
+     @keyframes filmReel {
+       0% { background-position: 0 0; }
+       100% { background-position: 100% 100%; }
+     }
+
+     body::after {
+       content: '';
+       position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       background: url('path-to-film-reel-texture.png');
+       opacity: 0.05;
+       z-index: -1;
+       animation: filmReel 20s linear infinite;
+     }
+
+     .neo-junto-header {
+       font-family: 'Pulp Fiction', sans-serif;
+       font-size: 72px;
+       color: #FF00FF;
+       text-shadow:
+         0 0 5px #FF00FF,
+         0 0 10px #FF00FF,
+         0 0 20px #FF00FF,
+         0 0 40px #FF00FF,
+         0 0 80px #FF00FF;
+       animation: neonFlicker 1.5s infinite alternate;
+     }
+
+     @keyframes neonFlicker {
+       0%, 18%, 22%, 25%, 53%, 57%, 100% {
+         text-shadow:
+           0 0 5px #FF00FF,
+           0 0 10px #FF00FF,
+           0 0 20px #FF00FF,
+           0 0 40px #FF00FF,
+           0 0 80px #FF00FF;
+       }
+       20%, 24%, 55% {
+         text-shadow: none;
+       }
+     }
+
+     .menu-item {
+       transition: all 0.3s ease;
+     }
+
+     .menu-item:hover {
+       animation: glitch 0.3s infinite;
+     }
+
+     @keyframes glitch {
+       0% { transform: translate(2px, 2px); }
+       25% { transform: translate(-2px, -2px); }
+       50% { transform: translate(-2px, 2px); }
+       75% { transform: translate(2px, -2px); }
+       100% { transform: translate(2px, 2px); }
+     }
+
+
