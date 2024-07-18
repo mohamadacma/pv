@@ -23,7 +23,7 @@ function initHorrorTypewriter() {
         "STARSHIP",
         "ENTER THE VOID",
         "DAFT PUNK",
-        "DAYS OF HEAVEN",
+        "AWS",
         "ELECTRIC SHEEP",
         "GORBASHEV",
         "TIKA MASALA",
