@@ -1,5 +1,5 @@
 export function initTypewriter() {
-    const text = `Hello!!\n Thanks for stopping by the neo-junto cafe!`;
+    const text = `Hello!\n Welcome to the neo-junto cafe!`;
     const typingElement = document.querySelector('.tarantino-typewriter-text');
     typingElement.textContent = '';
     let i = 0;
