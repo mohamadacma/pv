@@ -4,12 +4,14 @@ import { initHackerEffect } from './hackerEffect.js';
 import { initModalHandler } from './modalHandler.js';
 import { initSmoothScrolling } from './smoothScroll.js';
 import { showGrid } from './gridHandler.js';
+import { initThemeSwitch } from './themeSwitch.js';
 
 function initEssentials() {
     initSmoothScrolling();
     initTypewriter();
     initHorrorTypewriter();
     initMenuItems();
+    initThemeSwitch();
 }
 
 function initHorrorTypewriter() {
@@ -26,7 +28,7 @@ function initHorrorTypewriter() {
         "GATTACA",
         "ELECTRIC SHEEP",
         "GORBASHEV",
-        "TIKA MASALA",
+        "FIRST AMMENDMENT",
         "LAURIE ANDERSON",
         "FEVER RAY",
         "M.I.A",

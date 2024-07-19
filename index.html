@@ -68,6 +68,13 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="text-white text-center py-4">
     <h1 class="animate-title">Neo-Junto cafe</h1>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <em>Enable Hacker Mode</em>
+        </div>
     </header>
     <nav class="coffee-menu">
         <a href="#about" class="menu-item" data-text="About">About</a>
@@ -222,9 +229,11 @@
 <!--audio-->
 <audio id="beep-sound" src="src/media/beep-sound.mp3" preload="auto"></audio>
 
+<script type="module" src="src/js/themeSwitch.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js" defer></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
 <script type="module" src="src/js/main.js"></script>
+
 </body>
 </html>
