@@ -7,6 +7,7 @@ function setTheme(isDark) {
     lightTheme.disabled = isDark;
     localStorage.setItem('darkTheme', isDark);
     themeToggle.checked = isDark;
+    document.body.classList.toggle('light-mode', !isDark);
 }
 
 function toggleTheme() {
