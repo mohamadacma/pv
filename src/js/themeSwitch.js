@@ -10,11 +10,11 @@ function setTheme(isDark) {
 }
 
 function toggleTheme() {
-    setTheme(!darkTheme.disabled);
+    setTheme(themeToggle.checked);
 }
 
 export function initThemeSwitch() {
-    const prefersDark = localStorage.getItem('darkTheme') !== 'false';
+    const prefersDark = localStorage.getItem('darkTheme') === 'true';
     setTheme(prefersDark);
 
     themeToggle.addEventListener('change', toggleTheme);
