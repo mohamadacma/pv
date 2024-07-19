@@ -62,17 +62,18 @@
     }
     </style>
     <link rel="preload" href="src/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="src/css/styles.css" id="styles-css">
+    <link rel="stylesheet" href="src/css/light-theme.css" id="light-theme-css" disabled>
     <noscript><link rel="stylesheet" href="src/css/styles.css"></noscript>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="text-white text-center py-4">
     <h1 class="animate-title">Neo-Junto cafe</h1>
-        <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="slider round"></div>
-            </label>
+        <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" />
+            Switch Theme
+        </label>
             <em>Enable Hacker Mode</em>
         </div>
     </header>
