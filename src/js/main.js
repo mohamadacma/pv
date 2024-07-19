@@ -42,6 +42,7 @@ function initHorrorTypewriter() {
         "FEDERALIST PAPERS",
         "BAD SCIENCE",
         "ANTIFRAGILE",
+        "DONT DIE",
         "DONT DIE"
     ];
     let currentIndex = 0;
