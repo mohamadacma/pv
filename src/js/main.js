@@ -11,7 +11,7 @@ function initEssentials() {
     initTypewriter();
     initHorrorTypewriter();
     initMenuItems();
-    initTheme();
+    initThemeSwitch();
 }
 
 function initHorrorTypewriter() {
