@@ -1,4 +1,4 @@
-// themeSwitch.js
+
 
 // Get references to the theme stylesheets and toggle switch
 const darkTheme = document.getElementById('styles-css');
