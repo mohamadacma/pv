@@ -19,7 +19,7 @@ function initHorrorTypewriter() {
         "BRIDGE RNA",
         "BLUEPRINT",
         "BORGES",
-        "DONT DIE,
+        "DONT DIE",
         "STARSHIP",
         "DONT DIE",
         "DAFT PUNK",
