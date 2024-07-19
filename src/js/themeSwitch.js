@@ -8,7 +8,17 @@ function setTheme(isDark) {
     localStorage.setItem('darkTheme', isDark);
     themeToggle.checked = isDark;
     document.body.classList.toggle('light-mode', !isDark);
-}
+    const sunIcon = document.querySelector('.sun-icon');
+        const moonIcon = document.querySelector('.moon-icon');
+
+        if (isDark) {
+            sunIcon.style.color = '#555';
+            moonIcon.style.color = '#f5f3ce';
+        } else {
+            sunIcon.style.color = '#f9d71c';
+            moonIcon.style.color = '#555';
+        }
+    }
 
 function toggleTheme() {
     setTheme(themeToggle.checked);
