@@ -38,9 +38,8 @@ function initHorrorTypewriter() {
         "CHEMICAL BROTHERS",
         "IBN BATTUTA",
         "BOYZ NOISE",
-        "FIRST AMENDMENT"
+        "FIRST AMENDMENT",
         "ZERO DAY VIBES",
-        "HERMETO PASCOAL",
         "BENJAMIN FRANKLIN",
         "THEODORE ROOSEVELT",
         "ALEXANDER HAMILTON",
