@@ -687,7 +687,9 @@ h2 {
    }
 
    .friction-screenshot {
-       max-width: 100%;
+       max-width: 50%;
+       width:auto;
+       height: auto;
        border: 1px solid #ddd;
        border-radius: 4px;
        margin-bottom: 20px;
