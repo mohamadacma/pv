@@ -17,11 +17,13 @@ function initEssentials() {
 function initHorrorTypewriter() {
     const container = document.querySelector('.horror-typewriter-text');
     const interests = [
-        "DONT DIE",
-        "BRIDGE RNA",
-        "BLUEPRINT",
-        "BORGES",
-        "DONT DIE",
+        "DATA BREW",
+        "CYBERPUNK CAFE",
+        "404 NOT FOUND",
+        "ACCESS GRANTED",
+        "GITHUB OVERLOAD",
+        "FATAL ERROR",
+        "MEME MACHINE",
         "STARSHIP",
         "DONT DIE",
         "DAFT PUNK",
@@ -36,7 +38,8 @@ function initHorrorTypewriter() {
         "CHEMICAL BROTHERS",
         "IBN BATTUTA",
         "BOYZ NOISE",
-        "DONT DIE",
+        "FIRST AMENDMENT"
+        "ZERO DAY VIBES",
         "HERMETO PASCOAL",
         "BENJAMIN FRANKLIN",
         "THEODORE ROOSEVELT",
