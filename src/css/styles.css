@@ -686,3 +686,38 @@ h2 {
      color: #f5f3ce;
    }
 
+   .friction-screenshot {
+       max-width: 100%;
+       border: 1px solid #ddd;
+       border-radius: 4px;
+       margin-bottom: 20px;
+   }
+
+   .friction-list {
+       list-style-type: none;
+       padding-left: 0;
+   }
+
+   .friction-list li {
+       margin-bottom: 10px;
+   }
+
+   .friction-list li li {
+       margin-top: 5px;
+       margin-left: 20px;
+   }
+
+   .impact, .priority {
+       font-style: italic;
+       border-left: 3px solid #007bff;
+       padding-left: 10px;
+   }
+
+   .suggestions {
+       padding-left: 20px;
+   }
+
+   .suggestions li {
+       margin-bottom: 5px;
+   }
+
