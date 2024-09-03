@@ -30,7 +30,7 @@ function initHorrorTypewriter() {
         "GATTACA",
         "ELECTRIC SHEEP",
         "GORBASHEV",
-        "FIRST AMMENDMENT",
+        "FIRST AMENDMENT",
         "LAURIE ANDERSON",
         "FEVER RAY",
         "M.I.A",
