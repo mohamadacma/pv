@@ -17,7 +17,7 @@ function initEssentials() {
 function initHorrorTypewriter() {
     const container = document.querySelector('.horror-typewriter-text');
     const interests = [
-        "DAFT PUNK"
+        ""
     ];
     let currentIndex = 0;
 
