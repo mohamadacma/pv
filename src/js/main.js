@@ -18,6 +18,27 @@ function initHorrorTypewriter() {
     const container = document.querySelector('.horror-typewriter-text');
     const interests = [
 
+        "DAFT PUNK",
+        "GATTACA",
+        "GORBASHEV",
+        "FIRST AMENDMENT",
+        "LAURIE ANDERSON",
+        "FEVER RAY",
+        "M.I.A",
+        "FOOLED BY RANDOMNESS",
+        "CHEMICAL BROTHERS",
+        "IBN BATTUTA",
+        "BOYZ NOISE",
+        "FIRST AMENDMENT",
+        "ZERO DAY VIBES",
+        "BENJAMIN FRANKLIN",
+        "THEODORE ROOSEVELT",
+        "ALEXANDER HAMILTON",
+        "FEDERALIST PAPERS",
+        "BAD SCIENCE",
+        "ANTIFRAGILE",
+        "DONT DIE",
+        "DONT DIE"
     ];
     let currentIndex = 0;
 
