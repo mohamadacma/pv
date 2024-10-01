@@ -17,37 +17,7 @@ function initEssentials() {
 function initHorrorTypewriter() {
     const container = document.querySelector('.horror-typewriter-text');
     const interests = [
-        "DATA BREW",
-        "CYBERPUNK CAFE",
-        "404 NOT FOUND",
-        "ACCESS GRANTED",
-        "GITHUB OVERLOAD",
-        "FATAL ERROR",
-        "MEME MACHINE",
-        "STARSHIP",
-        "DONT DIE",
-        "DAFT PUNK",
-        "GATTACA",
-        "ELECTRIC SHEEP",
-        "GORBASHEV",
-        "FIRST AMENDMENT",
-        "LAURIE ANDERSON",
-        "FEVER RAY",
-        "M.I.A",
-        "FOOLED BY RANDOMNESS",
-        "CHEMICAL BROTHERS",
-        "IBN BATTUTA",
-        "BOYZ NOISE",
-        "FIRST AMENDMENT",
-        "ZERO DAY VIBES",
-        "BENJAMIN FRANKLIN",
-        "THEODORE ROOSEVELT",
-        "ALEXANDER HAMILTON",
-        "FEDERALIST PAPERS",
-        "BAD SCIENCE",
-        "ANTIFRAGILE",
-        "DONT DIE",
-        "DONT DIE"
+
     ];
     let currentIndex = 0;
 
