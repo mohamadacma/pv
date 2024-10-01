@@ -14,13 +14,6 @@ function initEssentials() {
     initThemeSwitch();
 }
 
-function initHorrorTypewriter() {
-    const container = document.querySelector('.horror-typewriter-text');
-    const interests = [
-
-    ];
-    let currentIndex = 0;
-
     function showNextInterest() {
         if (currentIndex < interests.length) {
             container.textContent = interests[currentIndex];
