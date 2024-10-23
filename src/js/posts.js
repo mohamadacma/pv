@@ -21,23 +21,23 @@ Now, The World War II museum might just be one of the most educational history l
 <img src="images/NOLAThree.jpeg" alt="WWII Museum" class="post-image" />
 <span class="image-caption">The National WWII Museum - An immersive journey through history</span>
 
-<img src="src/images/NOLAFour.jpeg" alt="WWII Museum Exhibit" class="post-image" />
+<img src="images/NOLAFour.jpeg" alt="WWII Museum Exhibit" class="post-image" />
 <span class="image-caption">Interactive exhibits bringing history to life</span>
 
 One of the other museums that I really enjoyed hanging out at was the pharmacy museum where I've learned about chemicals used as medicine way before the invention of antibiotics and penicillin and all that jazz, simply unthinkable to wanna live at that time and experience the horror of getting down with syphilis, for example and having to surgically have your middle finger attached to your nose so that a new nose grows back.
 
-<img src="src/images/NOLAFive.jpeg" alt="Pharmacy Museum" class="post-image" />
+<img src="images/NOLAFive.jpeg" alt="Pharmacy Museum" class="post-image" />
 <span class="image-caption">The Historic Pharmacy Museum - A glimpse into medical practices of the past</span>
 
 I did a lot of walking, it looked like an aged city. While I was walking around Bourbon Street and Frenchman St, I walked into a random jazz club and there was a show about to begin and got a ticket and was an excellent 2hr event with funny/talented jazz orchestra.
 
-<img src="src/images/NOLASix.jpeg" alt="French Quarter Night" class="post-image" />
+<img src="images/NOLASix.jpeg" alt="French Quarter Night" class="post-image" />
 <span class="image-caption">The vibrant nightlife of the French Quarter</span>
 
-<img src="src/images/NOLASeven.jpeg" alt="Jazz Club" class="post-image" />
+<img src="images/NOLASeven.jpeg" alt="Jazz Club" class="post-image" />
 <span class="image-caption">Live jazz performance - the soul of New Orleans</span>
 
-<img src="src/images/NOLAEight.jpeg" alt="Street Scene" class="post-image" />
+<img src="images/NOLAEight.jpeg" alt="Street Scene" class="post-image" />
 <span class="image-caption">The aged but charming architecture of the city's historic district</span>`,
         tags: ["travel", "new-orleans", "museums", "jazz"]
     }
