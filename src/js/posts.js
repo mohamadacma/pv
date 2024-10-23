@@ -18,8 +18,8 @@ That said, I've had some cool learning experiences at a couple of places that I 
 
 Now, The World War II museum might just be one of the most educational history lessons I've ever had. I never thought of the museum as a medium to learn about history before. I guess this time around I took my time to read through everything chronologically and experience the various events. You can read history books about the events that led to World War II and the immense role of the US, but can you get the same educational depth you get at a 4 hours museum tour, definitely not.
 
-<img src="images/NOLAFour.jpeg" alt="WWII Museum Exhibit" class="post-image" />
-<span class="image-caption">Interactive exhibits bringing history to life</span>
+<img src="images/NOLAFour.jpeg" alt="Trains" class="post-image" />
+<span class="image-caption"></span>
 
 One of the other museums that I really enjoyed hanging out at was the pharmacy museum where I've learned about chemicals used as medicine way before the invention of antibiotics and penicillin and all that jazz, simply unthinkable to wanna live at that time and experience the horror of getting down with syphilis, for example and having to surgically have your middle finger attached to your nose so that a new nose grows back.
 
@@ -35,7 +35,7 @@ I did a lot of walking, it looked like an aged city. While I was walking around 
 <span class="image-caption">Live jazz performance - the soul of New Orleans</span>
 
 <img src="images/NOLAEight.jpeg" alt="Street Scene" class="post-image" />
-<span class="image-caption">The aged but charming architecture of the city's historic district</span>`,
+<span class="image-caption">got to the other side of the mississipi river by Ferry to try a taco place, worth it </span>`,
         tags: ["travel", "new-orleans", "museums", "jazz"]
     }
 ];
