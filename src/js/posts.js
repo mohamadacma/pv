@@ -18,7 +18,7 @@ That said, I've had some cool learning experiences at a couple of places that I 
 
 Now, The World War II museum might just be one of the most educational history lessons I've ever had. I never thought of the museum as a medium to learn about history before. I guess this time around I took my time to read through everything chronologically and experience the various events. You can read history books about the events that led to World War II and the immense role of the US, but can you get the same educational depth you get at a 4 hours museum tour, definitely not.
 
-<img src="src/images/NOLAThree.jpeg" alt="WWII Museum" class="post-image" />
+<img src="images/NOLAThree.jpeg" alt="WWII Museum" class="post-image" />
 <span class="image-caption">The National WWII Museum - An immersive journey through history</span>
 
 <img src="src/images/NOLAFour.jpeg" alt="WWII Museum Exhibit" class="post-image" />
