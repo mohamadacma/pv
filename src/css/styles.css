@@ -723,3 +723,52 @@ h2 {
        margin-bottom: 5px;
    }
 
+   .post-card {
+       border: 1px solid #0f0;
+       padding: 20px;
+       margin-bottom: 20px;
+       cursor: pointer;
+       transition: all 0.3s ease;
+       background: rgba(0, 255, 0, 0.05);
+       width: 100%;
+   }
+
+   .post-header {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin-bottom: 10px;
+   }
+
+   .post-title {
+       margin: 0;
+       color: #0f0;
+       text-shadow: 0 0 5px #0f0;
+   }
+
+   .post-meta {
+       font-size: 0.9em;
+       color: #0f0;
+       opacity: 0.8;
+   }
+
+   .post-preview {
+       color: #0f0;
+       opacity: 0.9;
+   }
+
+   .full-post {
+       padding: 20px;
+       background: rgba(0, 0, 0, 0.3);
+       border: 1px solid #0f0;
+   }
+
+   .back-button {
+       background: none;
+       border: 1px solid #0f0;
+       color: #0f0;
+       padding: 8px 16px;
+       margin-bottom: 20px;
+       cursor: pointer;
+   }
+
