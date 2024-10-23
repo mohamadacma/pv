@@ -3,7 +3,7 @@ const blogPosts = [
     {
         id: 1,
         title: "4-day trip to New Orleans: Four Days is Too Much",
-        date: "2024-10-23",
+        date: "2024-10-20",
         time: "15:30",
         preview: "I've visited New Orleans for four days and I think that was a mistake. Here's why New Orleans is a 2-day city...",
         content: `I've visited New Orleans for four days and I think that was a mistake. New Orleans is a 2-day city. By the end of the second day, the ennui begins to strike and you start feeling the passage of time, like "am I in a Nuri Ceylan movie or something"?
