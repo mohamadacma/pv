@@ -6,71 +6,90 @@ const blogPosts = [
         date: "2024-10-23",
         time: "15:30",
         preview: "I've visited New Orleans for four days and I think that was a mistake. Here's why New Orleans is a 2-day city...",
-        content: `I've visited New Orleans for four days and I think that was a mistake. New Orleans is a 2 day city. By the end of the second day, the ennui begins to strike and you start feeling  the passage of time, like " am I in a Nuri Ceylan movie or something"?
+        content: `I've visited New Orleans for four days and I think that was a mistake. New Orleans is a 2-day city. By the end of the second day, the ennui begins to strike and you start feeling the passage of time, like "am I in a Nuri Ceylan movie or something"?
 
-That said, I've had some cool learning experience at a couple of places that I found super interesting. The uber driver was a NOLA born and I barraged him with questions about the city for the duration of the trip; He said that NOLA was never colonised by the british, only by spanish and french and that the US later bought it or something and then he told me about the tombstomes being above ground bc of the floods that used to happen taken from the french model.
+<img src="src/images/NOLAOne.jpeg" alt="New Orleans Street View" class="post-image" />
+<span class="image-caption">The characteristic charm of New Orleans' historic streets</span>
 
-Now, The world war II musuem might just be one of the most educational history lessons I've ever had. I never thought of the musuem as a medium to learn about history before. I guess this time around I took my time to read through everything chronologically and experience the various events. You can read history books about the events that led to world war II and the imeense role of the US, but can you get the same educational depth you get at a 4 hours musuem tour, defifnitely not.
+That said, I've had some cool learning experiences at a couple of places that I found super interesting. The uber driver was a NOLA born and I barraged him with questions about the city for the duration of the trip; He said that NOLA was never colonized by the British, only by Spanish and French and that the US later bought it or something and then he told me about the tombstones being above ground because of the floods that used to happen taken from the French model.
 
-One of the other musuems that I really enjoyed hanging out at was the phramacy musuem where I've learned about chemicals used as medicine way before the invention of antibiotics and penicillin and all that jazz, simply unthinkable to wanna live at that time and experience the horror of getting down with syphilis, for example and  and having to surgically have your middle finger attached to your nose so that a new noise grows back.
+<img src="src/images/NOLATwo.jpeg" alt="New Orleans Cemetery" class="post-image" />
+<span class="image-caption">The famous above-ground tombs, a distinctive feature of New Orleans cemeteries adapted from French architectural practices</span>
 
-I did a lot of walking, it looked like an aged city. while I was waking around bourbon street and Frenchman st, I walked into a random jazz club and there was a show about to begin and got a ticket and was an excellent 2hr event with funny/talented jazz orchestra.`,
+Now, The World War II museum might just be one of the most educational history lessons I've ever had. I never thought of the museum as a medium to learn about history before. I guess this time around I took my time to read through everything chronologically and experience the various events. You can read history books about the events that led to World War II and the immense role of the US, but can you get the same educational depth you get at a 4 hours museum tour, definitely not.
+
+<img src="src/images/NOLAThree.jpeg" alt="WWII Museum" class="post-image" />
+<span class="image-caption">The National WWII Museum - An immersive journey through history</span>
+
+<img src="src/images/NOLAFour.jpeg" alt="WWII Museum Exhibit" class="post-image" />
+<span class="image-caption">Interactive exhibits bringing history to life</span>
+
+One of the other museums that I really enjoyed hanging out at was the pharmacy museum where I've learned about chemicals used as medicine way before the invention of antibiotics and penicillin and all that jazz, simply unthinkable to wanna live at that time and experience the horror of getting down with syphilis, for example and having to surgically have your middle finger attached to your nose so that a new nose grows back.
+
+<img src="src/images/NOLAFive.jpeg" alt="Pharmacy Museum" class="post-image" />
+<span class="image-caption">The Historic Pharmacy Museum - A glimpse into medical practices of the past</span>
+
+I did a lot of walking, it looked like an aged city. While I was walking around Bourbon Street and Frenchman St, I walked into a random jazz club and there was a show about to begin and got a ticket and was an excellent 2hr event with funny/talented jazz orchestra.
+
+<img src="src/images/NOLASix.jpeg" alt="French Quarter Night" class="post-image" />
+<span class="image-caption">The vibrant nightlife of the French Quarter</span>
+
+<img src="src/images/NOLASeven.jpeg" alt="Jazz Club" class="post-image" />
+<span class="image-caption">Live jazz performance - the soul of New Orleans</span>
+
+<img src="src/images/NOLAEight.jpeg" alt="Street Scene" class="post-image" />
+<span class="image-caption">The aged but charming architecture of the city's historic district</span>`,
         tags: ["travel", "new-orleans", "museums", "jazz"]
     }
 ];
 
-// Function to render posts
-function renderPosts() {
-    const writingsContainer = document.querySelector('.writings-container');
-    if (!writingsContainer) return;
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to render posts
+    function renderPosts() {
+        const writingsContainer = document.querySelector('.writings-container');
+        if (!writingsContainer) {
+            console.error('Writings container not found');
+            return;
+        }
 
-    // Clear existing content
-    writingsContainer.innerHTML = '';
+        // Clear existing content
+        writingsContainer.innerHTML = '';
 
-    if (blogPosts.length === 0) {
-        writingsContainer.innerHTML = `
-            <p class="hacker-text blink-cursor">No articles published yet...</p>
-        `;
-        return;
+        // Add posts
+        blogPosts.forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.className = 'post-card';
+            postElement.innerHTML = `
+                <div class="post-header">
+                    <h3 class="post-title">${post.title}</h3>
+                    <span class="post-meta">${post.date} | ${post.time}</span>
+                </div>
+                <div class="post-preview">${post.preview}</div>
+            `;
+
+            postElement.addEventListener('click', () => showPost(post));
+            writingsContainer.appendChild(postElement);
+        });
     }
 
-    // Add posts
-    blogPosts.forEach(post => {
-        const postElement = document.createElement('div');
-        postElement.className = 'post-card';
-        postElement.innerHTML = `
-            <div class="post-header">
-                <h3 class="post-title">${post.title}</h3>
-                <span class="post-meta">${post.date} | ${post.time}</span>
-            </div>
-            <div class="post-preview">${post.preview}</div>
+    // Function to show full post
+    function showPost(post) {
+        const writingsContainer = document.querySelector('.writings-container');
+        writingsContainer.innerHTML = `
+            <button class="back-button">← Back to writings</button>
+            <article class="full-post">
+                <h1 class="post-title">${post.title}</h1>
+                <div class="post-meta">${post.date} | ${post.time}</div>
+                <div class="post-content">${post.content}</div>
+                <div class="post-tags">
+                    ${post.tags.map(tag => `<span class="tag">#${tag}</span>`).join(' ')}
+                </div>
+            </article>
         `;
 
-        // Add click handler
-        postElement.addEventListener('click', () => showPost(post));
-        writingsContainer.appendChild(postElement);
-    });
-}
+        document.querySelector('.back-button').addEventListener('click', renderPosts);
+    }
 
-// Function to show full post
-function showPost(post) {
-    const writingsContainer = document.querySelector('.writings-container');
-    writingsContainer.innerHTML = `
-        <button class="back-button">← Back to writings</button>
-        <article class="full-post">
-            <h1 class="post-title">${post.title}</h1>
-            <div class="post-meta">${post.date} | ${post.time}</div>
-            <div class="post-content">${post.content}</div>
-            <div class="post-tags">
-                ${post.tags.map(tag => `<span class="tag">#${tag}</span>`).join(' ')}
-            </div>
-        </article>
-    `;
-
-    document.querySelector('.back-button').addEventListener('click', () => {
-        renderPosts();
-    });
-}
-
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', renderPosts);
+    // Initialize
+    renderPosts();
+});
