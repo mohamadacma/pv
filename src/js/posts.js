@@ -13,7 +13,7 @@ const blogPosts = [
 
 That said, I've had some cool learning experiences at a couple of places that I found super interesting. The uber driver was a NOLA born and I barraged him with questions about the city for the duration of the trip; He said that NOLA was never colonized by the British, only by Spanish and French and that the US later bought it or something and then he told me about the tombstones being above ground because of the floods that used to happen taken from the French model.
 
-<img src="src/images/NOLATwo.jpeg" alt="Bourbon Street" class="post-image" />
+<img src="images/NOLATwo.jpeg" alt="Bourbon Street" class="post-image" />
 <span class="image-caption">The famous above-ground tombs, a distinctive feature of New Orleans cemeteries adapted from French architectural practices</span>
 
 Now, The World War II museum might just be one of the most educational history lessons I've ever had. I never thought of the museum as a medium to learn about history before. I guess this time around I took my time to read through everything chronologically and experience the various events. You can read history books about the events that led to World War II and the immense role of the US, but can you get the same educational depth you get at a 4 hours museum tour, definitely not.
@@ -23,8 +23,8 @@ Now, The World War II museum might just be one of the most educational history l
 
 One of the other museums that I really enjoyed hanging out at was the pharmacy museum where I've learned about chemicals used as medicine way before the invention of antibiotics and penicillin and all that jazz, simply unthinkable to wanna live at that time and experience the horror of getting down with syphilis, for example and having to surgically have your middle finger attached to your nose so that a new nose grows back.
 
-<img src="images/NOLAFive.jpeg" alt="Pharmacy Museum" class="post-image" />
-<span class="image-caption">The Historic Pharmacy Museum - A glimpse into medical practices of the past</span>
+<img src="images/NOLAFive.jpeg" alt="" class="post-image" />
+<span class="image-caption"></span>
 
 I did a lot of walking, it looked like an aged city. While I was walking around Bourbon Street and Frenchman St, I walked into a random jazz club and there was a show about to begin and got a ticket and was an excellent 2hr event with funny/talented jazz orchestra.
 
